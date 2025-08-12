@@ -1,548 +1,818 @@
-[
-  {
-    "name": "the hanged man",
-    "image": "assets/cards/the-hanged-man.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "The hierophant",
-    "image": "assets/cards/the-hierophant.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "The world",
-    "image": "assets/cards/the-world.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "The wheel of fortunes",
-    "image": "assets/cards/the-wheel-of-fortunes.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "Ace of pentacles",
-    "image": "assets/cards/ace-of-pentacles.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "Two of pentacles",
-    "image": "assets/cards/two-of-pentacles.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "Three of pentacles",
-    "image": "assets/cards/three-of-pentacles.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "4 of pentacles",
-    "image": "assets/cards/4-of-pentacles.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "Page of wands",
-    "image": "assets/cards/page-of-wands.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "knight of wands",
-    "image": "assets/cards/knight-of-wands.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "king of wands",
-    "image": "assets/cards/king-of-wands.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "queen of wands",
-    "image": "assets/cards/queen-of-wands.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "Justice",
-    "image": "assets/cards/justice.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "Temperance",
-    "image": "assets/cards/temperance.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "death",
-    "image": "assets/cards/death.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "judgement",
-    "image": "assets/cards/judgement.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "King of cups",
-    "image": "assets/cards/king-of-cups.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "Queen of Cups",
-    "image": "assets/cards/queen-of-cups.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "Ace of Swords",
-    "image": "assets/cards/ace-of-swords.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "2 Of swords",
-    "image": "assets/cards/2-of-swords.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "The Empress",
-    "image": "assets/cards/the-empress.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "The emperor",
-    "image": "assets/cards/the-emperor.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "The sun",
-    "image": "assets/cards/the-sun.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "The star",
-    "image": "assets/cards/the-star.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "9 Of pentacles",
-    "image": "assets/cards/9-of-pentacles.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "10 of pentacles",
-    "image": "assets/cards/10-of-pentacles.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "Night of pentacles",
-    "image": "assets/cards/night-of-pentacles.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "page of pentacles",
-    "image": "assets/cards/page-of-pentacles.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "5 of cups",
-    "image": "assets/cards/5-of-cups.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "6 of cups",
-    "image": "assets/cards/6-of-cups.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "7 of cups",
-    "image": "assets/cards/7-of-cups.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "8 of cups",
-    "image": "assets/cards/8-of-cups.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "4 of wands",
-    "image": "assets/cards/4-of-wands.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "5 of wands",
-    "image": "assets/cards/5-of-wands.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "6 of wands",
-    "image": "assets/cards/6-of-wands.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "7 of wands",
-    "image": "assets/cards/7-of-wands.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "7 of Swords",
-    "image": "assets/cards/7-of-swords.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "8 Of swords",
-    "image": "assets/cards/8-of-swords.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "9 of Swords",
-    "image": "assets/cards/9-of-swords.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "10 of swords",
-    "image": "assets/cards/10-of-swords.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "The tower",
-    "image": "assets/cards/the-tower.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "the fool",
-    "image": "assets/cards/the-fool.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "The magician",
-    "image": "assets/cards/the-magician.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "The High Priestess",
-    "image": "assets/cards/the-high-priestess.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "5 for pentacles",
-    "image": "assets/cards/5-for-pentacles.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "6 Of pentacles",
-    "image": "assets/cards/6-of-pentacles.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "7 Of pentacles",
-    "image": "assets/cards/7-of-pentacles.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "8 Of pentacles",
-    "image": "assets/cards/8-of-pentacles.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "Ace of cups",
-    "image": "assets/cards/ace-of-cups.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "Two of cups",
-    "image": "assets/cards/two-of-cups.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "Three of Cups",
-    "image": "assets/cards/three-of-cups.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "4 of cups",
-    "image": "assets/cards/4-of-cups.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "The lovers",
-    "image": "assets/cards/the-lovers.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "Strength",
-    "image": "assets/cards/strength.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "2 of wands",
-    "image": "assets/cards/2-of-wands.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "3 of wands",
-    "image": "assets/cards/3-of-wands.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "3 of words",
-    "image": "assets/cards/3-of-words.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "4 of words",
-    "image": "assets/cards/4-of-words.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "5 of words",
-    "image": "assets/cards/5-of-words.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "6 of words",
-    "image": "assets/cards/6-of-words.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "the moon",
-    "image": "assets/cards/the-moon.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "The hermit",
-    "image": "assets/cards/the-hermit.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "The devil",
-    "image": "assets/cards/the-devil.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "The Chariot",
-    "image": "assets/cards/the-chariot.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "King of pentacles",
-    "image": "assets/cards/king-of-pentacles.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "Queen of pentacles",
-    "image": "assets/cards/queen-of-pentacles.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "Thank you card skip this",
-    "image": "assets/cards/thank-you-card-skip-this.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "Thank you card skip this",
-    "image": "assets/cards/thank-you-card-skip-this.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "9 of Cups",
-    "image": "assets/cards/9-of-cups.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "10 of cups",
-    "image": "assets/cards/10-of-cups.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "Page of cups",
-    "image": "assets/cards/page-of-cups.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "Knight of Cups",
-    "image": "assets/cards/knight-of-cups.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "8 of wands",
-    "image": "assets/cards/8-of-wands.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "9 of wands",
-    "image": "assets/cards/9-of-wands.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "10 of wands",
-    "image": "assets/cards/10-of-wands.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "Ace of wands",
-    "image": "assets/cards/ace-of-wands.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "Page of swords",
-    "image": "assets/cards/page-of-swords.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  },
-  {
-    "name": "Knight of swords",
-    "image": "assets/cards/knight-of-swords.png",
-    "upright": "nan",
-    "reversed": "(to add later)",
-    "keywords": []
-  }
-]
+{
+  "cards": [
+    {
+      "arcana": "Major",
+      "number": 0,
+      "name": "The Fool",
+      "slug": "the-fool",
+      "image": "assets/cards/the-fool.png",
+      "upright": "Fresh start, leap of faith, curious heart. Hold the vision. Begin simple. Trust you’ll learn by moving.",
+      "reversed": "Hesitation, fear of missteps. Make the first imperfect move; adjust after."
+    },
+    {
+      "arcana": "Major",
+      "number": 1,
+      "name": "The Magician",
+      "slug": "the-magician",
+      "image": "assets/cards/the-magician.png",
+      "upright": "Focused will, skills activating, making it real. Choose one clear outcome today. Use what you already have.",
+      "reversed": "Scattered energy, self-doubt. Focus on one tool, one task. Prove momentum to yourself."
+    },
+    {
+      "arcana": "Major",
+      "number": 2,
+      "name": "The High Priestess",
+      "slug": "the-high-priestess",
+      "image": "assets/cards/the-high-priestess.png",
+      "upright": "Inner knowing, quiet wisdom, sacred pause. Listen first. Journal what your body whispers.",
+      "reversed": "Noise over intuition. Turn down external input. Trust your inner signal."
+    },
+    {
+      "arcana": "Major",
+      "number": 3,
+      "name": "The Empress",
+      "slug": "the-empress",
+      "image": "assets/cards/the-empress.png",
+      "upright": "Nurture, creativity, abundance growing. Feed your art and your body. Receive support.",
+      "reversed": "Creative block, self-neglect. Nourish before producing. Rest is productive."
+    },
+    {
+      "arcana": "Major",
+      "number": 4,
+      "name": "The Emperor",
+      "slug": "the-emperor",
+      "image": "assets/cards/the-emperor.png",
+      "upright": "Structure, leadership, healthy boundaries. Decide the rules of your day. Keep them kind and firm.",
+      "reversed": "Rigidity, control issues. Loosen the rules. Lead through trust, not tension."
+    },
+    {
+      "arcana": "Major",
+      "number": 5,
+      "name": "The Hierophant",
+      "slug": "the-hierophant",
+      "image": "assets/cards/the-hierophant.png",
+      "upright": "Tradition, guidance, learning the keys. Find a mentor or method. Integrate what resonates.",
+      "reversed": "Outgrowing old beliefs. Keep the wisdom, release the cage. Craft your own ritual."
+    },
+    {
+      "arcana": "Major",
+      "number": 6,
+      "name": "The Lovers",
+      "slug": "the-lovers",
+      "image": "assets/cards/the-lovers.png",
+      "upright": "Aligned choice, union, values harmony. Choose what loves you back and matches your values.",
+      "reversed": "Misalignment, people-pleasing. Choose the path that honors your needs, kindly."
+    },
+    {
+      "arcana": "Major",
+      "number": 7,
+      "name": "The Chariot",
+      "slug": "the-chariot",
+      "image": "assets/cards/the-chariot.png",
+      "upright": "Momentum, discipline, victory through focus. Set a direction. Say no to detours for 24 hours.",
+      "reversed": "Drift, willpower leaks. Simplify goals. Remove one distraction that steers you off."
+    },
+    {
+      "arcana": "Major",
+      "number": 8,
+      "name": "Strength",
+      "slug": "strength",
+      "image": "assets/cards/strength.png",
+      "upright": "Calm courage, compassion, gentle power. Lead with patience. Meet fear with breath and kindness.",
+      "reversed": "Inner critic loud, patience thin. Speak to yourself like a friend. Breathe first, then act."
+    },
+    {
+      "arcana": "Major",
+      "number": 9,
+      "name": "The Hermit",
+      "slug": "the-hermit",
+      "image": "assets/cards/the-hermit.png",
+      "upright": "Solitude, truth-seeking, inner light. Unplug. One quiet hour reveals the next step.",
+      "reversed": "Isolation, overthinking. Reconnect gently. Share one truth with a safe person."
+    },
+    {
+      "arcana": "Major",
+      "number": 10,
+      "name": "Wheel of Fortune",
+      "slug": "wheel-of-fortune",
+      "image": "assets/cards/wheel-of-fortune.png",
+      "upright": "Cycles turning, luck, timing opens. Cooperate with change. Pivot with grace.",
+      "reversed": "Resistance to change. Stop wrestling the river. Take the next doable step."
+    },
+    {
+      "arcana": "Major",
+      "number": 11,
+      "name": "Justice",
+      "slug": "justice",
+      "image": "assets/cards/justice.png",
+      "upright": "Truth, fairness, cause and effect. Balance the scales. Make the honest correction.",
+      "reversed": "Avoiding accountability. Own your part. Make a fair amends today."
+    },
+    {
+      "arcana": "Major",
+      "number": 12,
+      "name": "The Hanged Man",
+      "slug": "the-hanged-man",
+      "image": "assets/cards/the-hanged-man.png",
+      "upright": "Surrender, new perspective, sacred pause. Release control for a moment. Let clarity arrive.",
+      "reversed": "Stuckness without insight. Choose a time limit for pausing, then move."
+    },
+    {
+      "arcana": "Major",
+      "number": 13,
+      "name": "Death",
+      "slug": "death",
+      "image": "assets/cards/death.png",
+      "upright": "Endings, clearing, profound renewal. Allow what’s done to finish. Make space for life to enter.",
+      "reversed": "Clinging, fear of endings. Let one small thing go. Create space for renewal."
+    },
+    {
+      "arcana": "Major",
+      "number": 14,
+      "name": "Temperance",
+      "slug": "temperance",
+      "image": "assets/cards/temperance.png",
+      "upright": "Healing, moderation, divine blending. Mix rest with action. Find the middle that works today.",
+      "reversed": "Imbalance, all-or-nothing. Blend, don’t binge. Find a 60% workable mix."
+    },
+    {
+      "arcana": "Major",
+      "number": 15,
+      "name": "The Devil",
+      "slug": "the-devil",
+      "image": "assets/cards/the-devil.png",
+      "upright": "Attachments, temptation, reclaiming power. Name the hook. Choose one tiny freedom now.",
+      "reversed": "Breaking chains, recovery starting. Ask for support. Swap one habit for a kinder one."
+    },
+    {
+      "arcana": "Major",
+      "number": 16,
+      "name": "The Tower",
+      "slug": "the-tower",
+      "image": "assets/cards/the-tower.png",
+      "upright": "Sudden change, truth strikes, liberation. What falls frees you. Build on honesty, not habit.",
+      "reversed": "Aftershock, rebuilding. Stabilize basics: sleep, food, breath. Rebuild slowly."
+    },
+    {
+      "arcana": "Major",
+      "number": 17,
+      "name": "The Star",
+      "slug": "the-star",
+      "image": "assets/cards/the-star.png",
+      "upright": "Hope, guidance, gentle recovery. Refill your well. Follow the small light you trust.",
+      "reversed": "Hope flickers, self-belief thin. Tend the spark. Repeat one gentle affirmation."
+    },
+    {
+      "arcana": "Major",
+      "number": 18,
+      "name": "The Moon",
+      "slug": "the-moon",
+      "image": "assets/cards/the-moon.png",
+      "upright": "Mystery, intuition, navigating shadows. Move slowly. Ask dreams and signs for help.",
+      "reversed": "Confusion, anxiety, illusion. Ground in facts. Move by lantern, not floodlight."
+    },
+    {
+      "arcana": "Major",
+      "number": 19,
+      "name": "The Sun",
+      "slug": "the-sun",
+      "image": "assets/cards/the-sun.png",
+      "upright": "Joy, clarity, vitality, success. Say yes to what’s warm and simple. Celebrate a win.",
+      "reversed": "Burnout, forced cheer. Rest in honest light. Joy returns when you do."
+    },
+    {
+      "arcana": "Major",
+      "number": 20,
+      "name": "Judgement",
+      "slug": "judgement",
+      "image": "assets/cards/judgement.png",
+      "upright": "Awakening, calling, forgiveness. Answer the call. Release the past version of you.",
+      "reversed": "Doubt about your calling. Release perfection. Start where you stand."
+    },
+    {
+      "arcana": "Major",
+      "number": 21,
+      "name": "The World",
+      "slug": "the-world",
+      "image": "assets/cards/the-world.png",
+      "upright": "Completion, integration, next-level wholeness. Close the loop with gratitude. Prepare your next chapter.",
+      "reversed": "Almost there, loose ends. Finish the last 10%. Celebrate the closure."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Wands",
+      "rank": "Ace",
+      "number": 1,
+      "name": "Ace of Wands",
+      "slug": "ace-of-wands",
+      "image": "assets/cards/ace-of-wands.png",
+      "upright": "Ace of Wands: seed moment, new potential ignites. Themes: energy, purpose, creative fire.",
+      "reversed": "Ace of Wands (reversed): hesitation blocks a fresh start. Shadow: pace, burnout, scattered effort."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Wands",
+      "rank": "Two",
+      "number": 2,
+      "name": "Two of Wands",
+      "slug": "two-of-wands",
+      "image": "assets/cards/two-of-wands.png",
+      "upright": "Two of Wands: balance and choice—plan then move. Themes: energy, purpose, creative fire.",
+      "reversed": "Two of Wands (reversed): indecision; simplify the options. Shadow: pace, burnout, scattered effort."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Wands",
+      "rank": "Three",
+      "number": 3,
+      "name": "Three of Wands",
+      "slug": "three-of-wands",
+      "image": "assets/cards/three-of-wands.png",
+      "upright": "Three of Wands: collaboration and steady progress. Themes: energy, purpose, creative fire.",
+      "reversed": "Three of Wands (reversed): miscommunication; align expectations. Shadow: pace, burnout, scattered effort."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Wands",
+      "rank": "Four",
+      "number": 4,
+      "name": "Four of Wands",
+      "slug": "four-of-wands",
+      "image": "assets/cards/four-of-wands.png",
+      "upright": "Four of Wands: stability; protect your energy wisely. Themes: energy, purpose, creative fire.",
+      "reversed": "Four of Wands (reversed): stuck or hoarding energy; loosen. Shadow: pace, burnout, scattered effort."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Wands",
+      "rank": "Five",
+      "number": 5,
+      "name": "Five of Wands",
+      "slug": "five-of-wands",
+      "image": "assets/cards/five-of-wands.png",
+      "upright": "Five of Wands: challenge teaches resilience and skill. Themes: energy, purpose, creative fire.",
+      "reversed": "Five of Wands (reversed): conflict drains; choose growth over drama. Shadow: pace, burnout, scattered effort."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Wands",
+      "rank": "Six",
+      "number": 6,
+      "name": "Six of Wands",
+      "slug": "six-of-wands",
+      "image": "assets/cards/six-of-wands.png",
+      "upright": "Six of Wands: give/receive in healthy flow. Themes: energy, purpose, creative fire.",
+      "reversed": "Six of Wands (reversed): imbalanced giving; restore fairness. Shadow: pace, burnout, scattered effort."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Wands",
+      "rank": "Seven",
+      "number": 7,
+      "name": "Seven of Wands",
+      "slug": "seven-of-wands",
+      "image": "assets/cards/seven-of-wands.png",
+      "upright": "Seven of Wands: patience; tend what you planted. Themes: energy, purpose, creative fire.",
+      "reversed": "Seven of Wands (reversed): impatience; progress is still progress. Shadow: pace, burnout, scattered effort."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Wands",
+      "rank": "Eight",
+      "number": 8,
+      "name": "Eight of Wands",
+      "slug": "eight-of-wands",
+      "image": "assets/cards/eight-of-wands.png",
+      "upright": "Eight of Wands: practice and mastery through repetition. Themes: energy, purpose, creative fire.",
+      "reversed": "Eight of Wands (reversed): busywork; refine your craft with purpose. Shadow: pace, burnout, scattered effort."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Wands",
+      "rank": "Nine",
+      "number": 9,
+      "name": "Nine of Wands",
+      "slug": "nine-of-wands",
+      "image": "assets/cards/nine-of-wands.png",
+      "upright": "Nine of Wands: self-respect, fruits of your effort. Themes: energy, purpose, creative fire.",
+      "reversed": "Nine of Wands (reversed): self-doubt; acknowledge how far you’ve come. Shadow: pace, burnout, scattered effort."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Wands",
+      "rank": "Ten",
+      "number": 10,
+      "name": "Ten of Wands",
+      "slug": "ten-of-wands",
+      "image": "assets/cards/ten-of-wands.png",
+      "upright": "Ten of Wands: culmination; share the harvest. Themes: energy, purpose, creative fire.",
+      "reversed": "Ten of Wands (reversed): overload; release what’s complete. Shadow: pace, burnout, scattered effort."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Wands",
+      "rank": "Page",
+      "number": null,
+      "name": "Page of Wands",
+      "slug": "page-of-wands",
+      "image": "assets/cards/page-of-wands.png",
+      "upright": "Page of Wands: curiosity; learn by doing. Themes: energy, purpose, creative fire.",
+      "reversed": "Page of Wands (reversed): restless; start small and consistent. Shadow: pace, burnout, scattered effort."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Wands",
+      "rank": "Knight",
+      "number": null,
+      "name": "Knight of Wands",
+      "slug": "knight-of-wands",
+      "image": "assets/cards/knight-of-wands.png",
+      "upright": "Knight of Wands: momentum; channel drive with care. Themes: energy, purpose, creative fire.",
+      "reversed": "Knight of Wands (reversed): impulsive; direct the charge wisely. Shadow: pace, burnout, scattered effort."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Wands",
+      "rank": "Queen",
+      "number": null,
+      "name": "Queen of Wands",
+      "slug": "queen-of-wands",
+      "image": "assets/cards/queen-of-wands.png",
+      "upright": "Queen of Wands: embodied wisdom; nurture what matters. Themes: energy, purpose, creative fire.",
+      "reversed": "Queen of Wands (reversed): inward focus needed; refill your cup. Shadow: pace, burnout, scattered effort."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Wands",
+      "rank": "King",
+      "number": null,
+      "name": "King of Wands",
+      "slug": "king-of-wands",
+      "image": "assets/cards/king-of-wands.png",
+      "upright": "King of Wands: lead with clarity; set the tone. Themes: energy, purpose, creative fire.",
+      "reversed": "King of Wands (reversed): control without care; lead by example. Shadow: pace, burnout, scattered effort."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Cups",
+      "rank": "Ace",
+      "number": 1,
+      "name": "Ace of Cups",
+      "slug": "ace-of-cups",
+      "image": "assets/cards/ace-of-cups.png",
+      "upright": "Ace of Cups: seed moment, new potential ignites. Themes: feelings, relationships, intuition.",
+      "reversed": "Ace of Cups (reversed): hesitation blocks a fresh start. Shadow: emotional spill, avoidance."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Cups",
+      "rank": "Two",
+      "number": 2,
+      "name": "Two of Cups",
+      "slug": "two-of-cups",
+      "image": "assets/cards/two-of-cups.png",
+      "upright": "Two of Cups: balance and choice—plan then move. Themes: feelings, relationships, intuition.",
+      "reversed": "Two of Cups (reversed): indecision; simplify the options. Shadow: emotional spill, avoidance."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Cups",
+      "rank": "Three",
+      "number": 3,
+      "name": "Three of Cups",
+      "slug": "three-of-cups",
+      "image": "assets/cards/three-of-cups.png",
+      "upright": "Three of Cups: collaboration and steady progress. Themes: feelings, relationships, intuition.",
+      "reversed": "Three of Cups (reversed): miscommunication; align expectations. Shadow: emotional spill, avoidance."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Cups",
+      "rank": "Four",
+      "number": 4,
+      "name": "Four of Cups",
+      "slug": "four-of-cups",
+      "image": "assets/cards/four-of-cups.png",
+      "upright": "Four of Cups: stability; protect your energy wisely. Themes: feelings, relationships, intuition.",
+      "reversed": "Four of Cups (reversed): stuck or hoarding energy; loosen. Shadow: emotional spill, avoidance."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Cups",
+      "rank": "Five",
+      "number": 5,
+      "name": "Five of Cups",
+      "slug": "five-of-cups",
+      "image": "assets/cards/five-of-cups.png",
+      "upright": "Five of Cups: challenge teaches resilience and skill. Themes: feelings, relationships, intuition.",
+      "reversed": "Five of Cups (reversed): conflict drains; choose growth over drama. Shadow: emotional spill, avoidance."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Cups",
+      "rank": "Six",
+      "number": 6,
+      "name": "Six of Cups",
+      "slug": "six-of-cups",
+      "image": "assets/cards/six-of-cups.png",
+      "upright": "Six of Cups: give/receive in healthy flow. Themes: feelings, relationships, intuition.",
+      "reversed": "Six of Cups (reversed): imbalanced giving; restore fairness. Shadow: emotional spill, avoidance."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Cups",
+      "rank": "Seven",
+      "number": 7,
+      "name": "Seven of Cups",
+      "slug": "seven-of-cups",
+      "image": "assets/cards/seven-of-cups.png",
+      "upright": "Seven of Cups: patience; tend what you planted. Themes: feelings, relationships, intuition.",
+      "reversed": "Seven of Cups (reversed): impatience; progress is still progress. Shadow: emotional spill, avoidance."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Cups",
+      "rank": "Eight",
+      "number": 8,
+      "name": "Eight of Cups",
+      "slug": "eight-of-cups",
+      "image": "assets/cards/eight-of-cups.png",
+      "upright": "Eight of Cups: practice and mastery through repetition. Themes: feelings, relationships, intuition.",
+      "reversed": "Eight of Cups (reversed): busywork; refine your craft with purpose. Shadow: emotional spill, avoidance."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Cups",
+      "rank": "Nine",
+      "number": 9,
+      "name": "Nine of Cups",
+      "slug": "nine-of-cups",
+      "image": "assets/cards/nine-of-cups.png",
+      "upright": "Nine of Cups: self-respect, fruits of your effort. Themes: feelings, relationships, intuition.",
+      "reversed": "Nine of Cups (reversed): self-doubt; acknowledge how far you’ve come. Shadow: emotional spill, avoidance."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Cups",
+      "rank": "Ten",
+      "number": 10,
+      "name": "Ten of Cups",
+      "slug": "ten-of-cups",
+      "image": "assets/cards/ten-of-cups.png",
+      "upright": "Ten of Cups: culmination; share the harvest. Themes: feelings, relationships, intuition.",
+      "reversed": "Ten of Cups (reversed): overload; release what’s complete. Shadow: emotional spill, avoidance."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Cups",
+      "rank": "Page",
+      "number": null,
+      "name": "Page of Cups",
+      "slug": "page-of-cups",
+      "image": "assets/cards/page-of-cups.png",
+      "upright": "Page of Cups: curiosity; learn by doing. Themes: feelings, relationships, intuition.",
+      "reversed": "Page of Cups (reversed): restless; start small and consistent. Shadow: emotional spill, avoidance."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Cups",
+      "rank": "Knight",
+      "number": null,
+      "name": "Knight of Cups",
+      "slug": "knight-of-cups",
+      "image": "assets/cards/knight-of-cups.png",
+      "upright": "Knight of Cups: momentum; channel drive with care. Themes: feelings, relationships, intuition.",
+      "reversed": "Knight of Cups (reversed): impulsive; direct the charge wisely. Shadow: emotional spill, avoidance."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Cups",
+      "rank": "Queen",
+      "number": null,
+      "name": "Queen of Cups",
+      "slug": "queen-of-cups",
+      "image": "assets/cards/queen-of-cups.png",
+      "upright": "Queen of Cups: embodied wisdom; nurture what matters. Themes: feelings, relationships, intuition.",
+      "reversed": "Queen of Cups (reversed): inward focus needed; refill your cup. Shadow: emotional spill, avoidance."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Cups",
+      "rank": "King",
+      "number": null,
+      "name": "King of Cups",
+      "slug": "king-of-cups",
+      "image": "assets/cards/king-of-cups.png",
+      "upright": "King of Cups: lead with clarity; set the tone. Themes: feelings, relationships, intuition.",
+      "reversed": "King of Cups (reversed): control without care; lead by example. Shadow: emotional spill, avoidance."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Swords",
+      "rank": "Ace",
+      "number": 1,
+      "name": "Ace of Swords",
+      "slug": "ace-of-swords",
+      "image": "assets/cards/ace-of-swords.png",
+      "upright": "Ace of Swords: seed moment, new potential ignites. Themes: mind, truth, decisions.",
+      "reversed": "Ace of Swords (reversed): hesitation blocks a fresh start. Shadow: overthinking, harshness."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Swords",
+      "rank": "Two",
+      "number": 2,
+      "name": "Two of Swords",
+      "slug": "two-of-swords",
+      "image": "assets/cards/two-of-swords.png",
+      "upright": "Two of Swords: balance and choice—plan then move. Themes: mind, truth, decisions.",
+      "reversed": "Two of Swords (reversed): indecision; simplify the options. Shadow: overthinking, harshness."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Swords",
+      "rank": "Three",
+      "number": 3,
+      "name": "Three of Swords",
+      "slug": "three-of-swords",
+      "image": "assets/cards/three-of-swords.png",
+      "upright": "Three of Swords: collaboration and steady progress. Themes: mind, truth, decisions.",
+      "reversed": "Three of Swords (reversed): miscommunication; align expectations. Shadow: overthinking, harshness."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Swords",
+      "rank": "Four",
+      "number": 4,
+      "name": "Four of Swords",
+      "slug": "four-of-swords",
+      "image": "assets/cards/four-of-swords.png",
+      "upright": "Four of Swords: stability; protect your energy wisely. Themes: mind, truth, decisions.",
+      "reversed": "Four of Swords (reversed): stuck or hoarding energy; loosen. Shadow: overthinking, harshness."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Swords",
+      "rank": "Five",
+      "number": 5,
+      "name": "Five of Swords",
+      "slug": "five-of-swords",
+      "image": "assets/cards/five-of-swords.png",
+      "upright": "Five of Swords: challenge teaches resilience and skill. Themes: mind, truth, decisions.",
+      "reversed": "Five of Swords (reversed): conflict drains; choose growth over drama. Shadow: overthinking, harshness."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Swords",
+      "rank": "Six",
+      "number": 6,
+      "name": "Six of Swords",
+      "slug": "six-of-swords",
+      "image": "assets/cards/six-of-swords.png",
+      "upright": "Six of Swords: give/receive in healthy flow. Themes: mind, truth, decisions.",
+      "reversed": "Six of Swords (reversed): imbalanced giving; restore fairness. Shadow: overthinking, harshness."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Swords",
+      "rank": "Seven",
+      "number": 7,
+      "name": "Seven of Swords",
+      "slug": "seven-of-swords",
+      "image": "assets/cards/seven-of-swords.png",
+      "upright": "Seven of Swords: patience; tend what you planted. Themes: mind, truth, decisions.",
+      "reversed": "Seven of Swords (reversed): impatience; progress is still progress. Shadow: overthinking, harshness."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Swords",
+      "rank": "Eight",
+      "number": 8,
+      "name": "Eight of Swords",
+      "slug": "eight-of-swords",
+      "image": "assets/cards/eight-of-swords.png",
+      "upright": "Eight of Swords: practice and mastery through repetition. Themes: mind, truth, decisions.",
+      "reversed": "Eight of Swords (reversed): busywork; refine your craft with purpose. Shadow: overthinking, harshness."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Swords",
+      "rank": "Nine",
+      "number": 9,
+      "name": "Nine of Swords",
+      "slug": "nine-of-swords",
+      "image": "assets/cards/nine-of-swords.png",
+      "upright": "Nine of Swords: self-respect, fruits of your effort. Themes: mind, truth, decisions.",
+      "reversed": "Nine of Swords (reversed): self-doubt; acknowledge how far you’ve come. Shadow: overthinking, harshness."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Swords",
+      "rank": "Ten",
+      "number": 10,
+      "name": "Ten of Swords",
+      "slug": "ten-of-swords",
+      "image": "assets/cards/ten-of-swords.png",
+      "upright": "Ten of Swords: culmination; share the harvest. Themes: mind, truth, decisions.",
+      "reversed": "Ten of Swords (reversed): overload; release what’s complete. Shadow: overthinking, harshness."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Swords",
+      "rank": "Page",
+      "number": null,
+      "name": "Page of Swords",
+      "slug": "page-of-swords",
+      "image": "assets/cards/page-of-swords.png",
+      "upright": "Page of Swords: curiosity; learn by doing. Themes: mind, truth, decisions.",
+      "reversed": "Page of Swords (reversed): restless; start small and consistent. Shadow: overthinking, harshness."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Swords",
+      "rank": "Knight",
+      "number": null,
+      "name": "Knight of Swords",
+      "slug": "knight-of-swords",
+      "image": "assets/cards/knight-of-swords.png",
+      "upright": "Knight of Swords: momentum; channel drive with care. Themes: mind, truth, decisions.",
+      "reversed": "Knight of Swords (reversed): impulsive; direct the charge wisely. Shadow: overthinking, harshness."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Swords",
+      "rank": "Queen",
+      "number": null,
+      "name": "Queen of Swords",
+      "slug": "queen-of-swords",
+      "image": "assets/cards/queen-of-swords.png",
+      "upright": "Queen of Swords: embodied wisdom; nurture what matters. Themes: mind, truth, decisions.",
+      "reversed": "Queen of Swords (reversed): inward focus needed; refill your cup. Shadow: overthinking, harshness."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Swords",
+      "rank": "King",
+      "number": null,
+      "name": "King of Swords",
+      "slug": "king-of-swords",
+      "image": "assets/cards/king-of-swords.png",
+      "upright": "King of Swords: lead with clarity; set the tone. Themes: mind, truth, decisions.",
+      "reversed": "King of Swords (reversed): control without care; lead by example. Shadow: overthinking, harshness."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "rank": "Ace",
+      "number": 1,
+      "name": "Ace of Pentacles",
+      "slug": "ace-of-pentacles",
+      "image": "assets/cards/ace-of-pentacles.png",
+      "upright": "Ace of Pentacles: seed moment, new potential ignites. Themes: work, body, resources.",
+      "reversed": "Ace of Pentacles (reversed): hesitation blocks a fresh start. Shadow: stagnation, insecurity."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "rank": "Two",
+      "number": 2,
+      "name": "Two of Pentacles",
+      "slug": "two-of-pentacles",
+      "image": "assets/cards/two-of-pentacles.png",
+      "upright": "Two of Pentacles: balance and choice—plan then move. Themes: work, body, resources.",
+      "reversed": "Two of Pentacles (reversed): indecision; simplify the options. Shadow: stagnation, insecurity."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "rank": "Three",
+      "number": 3,
+      "name": "Three of Pentacles",
+      "slug": "three-of-pentacles",
+      "image": "assets/cards/three-of-pentacles.png",
+      "upright": "Three of Pentacles: collaboration and steady progress. Themes: work, body, resources.",
+      "reversed": "Three of Pentacles (reversed): miscommunication; align expectations. Shadow: stagnation, insecurity."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "rank": "Four",
+      "number": 4,
+      "name": "Four of Pentacles",
+      "slug": "four-of-pentacles",
+      "image": "assets/cards/four-of-pentacles.png",
+      "upright": "Four of Pentacles: stability; protect your energy wisely. Themes: work, body, resources.",
+      "reversed": "Four of Pentacles (reversed): stuck or hoarding energy; loosen. Shadow: stagnation, insecurity."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "rank": "Five",
+      "number": 5,
+      "name": "Five of Pentacles",
+      "slug": "five-of-pentacles",
+      "image": "assets/cards/five-of-pentacles.png",
+      "upright": "Five of Pentacles: challenge teaches resilience and skill. Themes: work, body, resources.",
+      "reversed": "Five of Pentacles (reversed): conflict drains; choose growth over drama. Shadow: stagnation, insecurity."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "rank": "Six",
+      "number": 6,
+      "name": "Six of Pentacles",
+      "slug": "six-of-pentacles",
+      "image": "assets/cards/six-of-pentacles.png",
+      "upright": "Six of Pentacles: give/receive in healthy flow. Themes: work, body, resources.",
+      "reversed": "Six of Pentacles (reversed): imbalanced giving; restore fairness. Shadow: stagnation, insecurity."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "rank": "Seven",
+      "number": 7,
+      "name": "Seven of Pentacles",
+      "slug": "seven-of-pentacles",
+      "image": "assets/cards/seven-of-pentacles.png",
+      "upright": "Seven of Pentacles: patience; tend what you planted. Themes: work, body, resources.",
+      "reversed": "Seven of Pentacles (reversed): impatience; progress is still progress. Shadow: stagnation, insecurity."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "rank": "Eight",
+      "number": 8,
+      "name": "Eight of Pentacles",
+      "slug": "eight-of-pentacles",
+      "image": "assets/cards/eight-of-pentacles.png",
+      "upright": "Eight of Pentacles: practice and mastery through repetition. Themes: work, body, resources.",
+      "reversed": "Eight of Pentacles (reversed): busywork; refine your craft with purpose. Shadow: stagnation, insecurity."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "rank": "Nine",
+      "number": 9,
+      "name": "Nine of Pentacles",
+      "slug": "nine-of-pentacles",
+      "image": "assets/cards/nine-of-pentacles.png",
+      "upright": "Nine of Pentacles: self-respect, fruits of your effort. Themes: work, body, resources.",
+      "reversed": "Nine of Pentacles (reversed): self-doubt; acknowledge how far you’ve come. Shadow: stagnation, insecurity."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "rank": "Ten",
+      "number": 10,
+      "name": "Ten of Pentacles",
+      "slug": "ten-of-pentacles",
+      "image": "assets/cards/ten-of-pentacles.png",
+      "upright": "Ten of Pentacles: culmination; share the harvest. Themes: work, body, resources.",
+      "reversed": "Ten of Pentacles (reversed): overload; release what’s complete. Shadow: stagnation, insecurity."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "rank": "Page",
+      "number": null,
+      "name": "Page of Pentacles",
+      "slug": "page-of-pentacles",
+      "image": "assets/cards/page-of-pentacles.png",
+      "upright": "Page of Pentacles: curiosity; learn by doing. Themes: work, body, resources.",
+      "reversed": "Page of Pentacles (reversed): restless; start small and consistent. Shadow: stagnation, insecurity."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "rank": "Knight",
+      "number": null,
+      "name": "Knight of Pentacles",
+      "slug": "knight-of-pentacles",
+      "image": "assets/cards/knight-of-pentacles.png",
+      "upright": "Knight of Pentacles: momentum; channel drive with care. Themes: work, body, resources.",
+      "reversed": "Knight of Pentacles (reversed): impulsive; direct the charge wisely. Shadow: stagnation, insecurity."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "rank": "Queen",
+      "number": null,
+      "name": "Queen of Pentacles",
+      "slug": "queen-of-pentacles",
+      "image": "assets/cards/queen-of-pentacles.png",
+      "upright": "Queen of Pentacles: embodied wisdom; nurture what matters. Themes: work, body, resources.",
+      "reversed": "Queen of Pentacles (reversed): inward focus needed; refill your cup. Shadow: stagnation, insecurity."
+    },
+    {
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "rank": "King",
+      "number": null,
+      "name": "King of Pentacles",
+      "slug": "king-of-pentacles",
+      "image": "assets/cards/king-of-pentacles.png",
+      "upright": "King of Pentacles: lead with clarity; set the tone. Themes: work, body, resources.",
+      "reversed": "King of Pentacles (reversed): control without care; lead by example. Shadow: stagnation, insecurity."
+    }
+  ]
+}
