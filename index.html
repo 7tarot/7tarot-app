@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>7Tarot — Matrix Cyber App</title>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+/* Matrix rain canvas sits behind content */
+#matrix-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  display: block;
+  background: #050608; /* deep background in case canvas fails */
+}
+/* Subtle overlay gradient for mystic purple tint */
+.matrix-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(1200px 800px at 50% -10%, rgba(124, 58, 237, 0.15), transparent),
+              radial-gradient(900px 600px at 120% 20%, rgba(16, 185, 129, 0.10), transparent);
+  z-index: -1;
+}
+/* Toggle button */
+#toggle-matrix {
+  position: fixed; right: 12px; bottom: 12px;
+  padding: 8px 12px; border-radius: 12px;
+  background: rgba(16,185,129,0.18);
+  color: #eafff4; border: 1px solid rgba(16,185,129,0.35);
+  font-size: 14px;
+  z-index: 50;
+}
+#toggle-matrix:hover { background: rgba(16,185,129,0.28); }
+</style></head>
+<body><canvas id="matrix-canvas"></canvas><div class="matrix-overlay"></div>
+<header class="hdr">
+<div class="logo">7TAROT</div>
+<nav class="tabs">
+<a class="tab" href="#shop">Shop</a>
+<a class="tab" href="#daily">Daily Draw</a>
+<a class="tab" href="#meanings">Meanings</a>
+<a class="btn ghost" href="#" id="whatsappBtn" rel="noopener">WhatsApp</a>
+<a class="btn ghost" href="#" id="messengerBtn" rel="noopener">Messenger</a>
+</nav>
+</header>
+<main>
+<section class="hero">
+<div class="rain"></div>
+<h1 class="glitch" data-text="7TAROT">7TAROT</h1>
+<p class="tag">Readings • Courses • Decks</p>
+<div class="links">
+<a class="btn primary" href="#shop">Shop</a>
+<a class="btn" href="#daily">Daily Draw</a>
+</div>
+</section>
+<section class="panel" id="shop">
+<h2>Shop</h2>
+<div class="grid" id="shopGrid"></div>
+</section>
+<section class="panel" id="daily">
+<h2>Daily Card</h2>
+<div class="daily" id="dailyWrap">
+<button class="btn primary" id="drawBtn">Draw Today's Card</button>
+<div class="hidden" id="cardView">
+<img alt="Your card" id="cardImg"/>
+<div class="cardInfo">
+<h3 id="cardName"></h3>
+<p id="cardMeaning"></p>
+<small id="cardMeta"></small>
+</div>
+</div>
+</div>
+</section>
+<section class="panel" id="meanings">
+<h2>Card Meanings</h2>
+<div class="grid small" id="meaningsGrid"></div>
+</section>
+</main>
+<!-- Required Question Form -->
+<div class="modal hidden" id="formModal">
+<div class="modal-card">
+<button class="close" id="closeForm">×</button>
+<h3>Your Question (required)</h3>
+<form id="intakeForm">
+<input id="productUrl" type="hidden"/>
+<label>Email (for confirmation)</label>
+<input id="email" placeholder="you@example.com" required="" type="email"/>
+<label>Main Question *</label>
+<textarea id="question" placeholder="What would you like me to read on?" required=""></textarea>
+<label>Background / Context (optional)</label>
+<textarea id="context" placeholder="Anything you'd like me to know"></textarea>
+<label>Extra info (optional)</label>
+<input id="extra" placeholder="Birth date, zodiac, etc."/>
+<button class="btn primary" type="submit">Continue to Checkout</button>
+</form>
+</div>
+</div>
+<footer class="ftr">
+<a class="btn ghost" href="https://7tarot.bigcartel.com" rel="noopener" target="_blank">Open Full Store</a>
+</footer>
+<script src="app.js"></script>
+<button id="toggle-matrix">Matrix: On</button><script>
+(function(){
+  const dpr = Math.max(1, Math.min(window.devicePixelRatio || 1, 2));
+  const canvas = document.getElementById('matrix-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  const letters = 'アイウエオカキクケコサシスセソタチツテトナニヌネノ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  let columns, drops, width, height, fontSize;
+
+  function resize() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    ctx.scale(dpr, dpr);
+    fontSize = Math.max(14, Math.min(26, Math.floor(width / 40)));
+    columns = Math.floor(width / fontSize);
+    drops = Array(columns).fill(0).map(()=> Math.floor(Math.random() * -50));
+  }
+
+  let hue = 140; // green-ish
+  let running = true;
+
+  function draw() {
+    if (!running) return;
+    // translucent background to create trails
+    ctx.fillStyle = 'rgba(5,6,8,0.08)';
+    ctx.fillRect(0, 0, width, height);
+
+    ctx.fillStyle = 'hsl(' + hue + ', 80%, 60%)';
+    ctx.font = fontSize + 'px monospace';
+
+    for (let i = 0; i < columns; i++) {
+      const text = letters[(Math.random() * letters.length) | 0];
+      const x = i * fontSize;
+      const y = drops[i] * fontSize;
+
+      // bright head
+      ctx.fillStyle = 'hsl(' + hue + ', 90%, 72%)';
+      ctx.fillText(text, x, y);
+      // trail
+      ctx.fillStyle = 'hsl(' + hue + ', 80%, 55%)';
+      ctx.fillText(text, x, y - fontSize);
+
+      if (y > height && Math.random() > 0.975) drops[i] = 0;
+      drops[i]++;
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  resize();
+  window.addEventListener('resize', resize);
+  requestAnimationFrame(draw);
+
+  // Expose toggle for accessibility/perf
+  window.__toggleMatrix = function(on){
+    running = on;
+    if (on) requestAnimationFrame(draw);
+    if (!on) {
+      // fade out canvas quickly
+      ctx.fillStyle = 'rgba(5,6,8,0.6)';
+      ctx.fillRect(0, 0, width, height);
+    }
+  };
+})();
+
+document.getElementById('toggle-matrix').addEventListener('click', function(){
+  const on = this.textContent.includes('On');
+  window.__toggleMatrix(!on);
+  this.textContent = 'Matrix: ' + (on ? 'Off' : 'On');
+});
+</script></body>
+</html>

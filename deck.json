@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Two of Swords (Reversed)",
+    "image": "assets/cards/2 DE ESPADAS (Invertido).png",
+    "upright": "Stalemate, difficult choices, balancing head and heart.",
+    "reversed": "Avoidance, indecision, time to choose."
+  },
+  {
+    "name": "Three of Swords",
+    "image": "assets/cards/3 of swords.png",
+    "upright": "Heartbreak, release, truth that heals.",
+    "reversed": "Healing, forgiveness, mending after pain."
+  },
+  {
+    "name": "Ten of Cups",
+    "image": "assets/cards/10 of Cups.png",
+    "upright": "Harmony, family, emotional fulfillment.",
+    "reversed": "Misaligned values, needing honest conversations."
+  },
+  {
+    "name": "Ace of Swords",
+    "image": "assets/cards/Ace of Swords_ Digital Reflection.png",
+    "upright": "Clarity, breakthroughs, a decisive yes.",
+    "reversed": "Mental fog, overthinking, cut through noise."
+  },
+  {
+    "name": "Page of Cups",
+    "image": "assets/cards/Page of Cups_ Digital Reflection.png",
+    "upright": "Creativity, intuitive messages, sweet news.",
+    "reversed": "Emotional immaturity, unrealistic expectations."
+  },
+  {
+    "name": "Two of Wands",
+    "image": "assets/cards/2 of wands.png",
+    "upright": "Planning, future vision, bold choice.",
+    "reversed": "Playing small, fear of the unknown."
+  },
+  {
+    "name": "Three of Wands (Alt)",
+    "image": "assets/cards/3 of w.png",
+    "upright": "Expansion, your ships coming in.",
+    "reversed": "Delays, adjust your strategy."
+  },
+  {
+    "name": "Three of Wands",
+    "image": "assets/cards/3 of wands.png",
+    "upright": "Momentum, progress, opportunity ahead.",
+    "reversed": "Hesitation, limited foresight."
+  },
+  {
+    "name": "Three of ???",
+    "image": "assets/cards/3 OF.png",
+    "upright": "Growth, collaboration, skill building.",
+    "reversed": "Misalignment, communication gaps."
+  },
+  {
+    "name": "Four of Wands",
+    "image": "assets/cards/4 OF WAND.png",
+    "upright": "Celebration, homecoming, milestones.",
+    "reversed": "Delays to celebrations, private joy."
+  },
+  {
+    "name": "Eight of Pentacles",
+    "image": "assets/cards/8 of penticals.png",
+    "upright": "Mastery, practice, quality work.",
+    "reversed": "Burnout, cutting corners\u2014slow down."
+  },
+  {
+    "name": "Justice",
+    "image": "assets/cards/justis.png",
+    "upright": "Fairness, truth, accountability.",
+    "reversed": "Imbalance, need to correct course."
+  },
+  {
+    "name": "Chains of Despair",
+    "image": "assets/cards/Chains of Despair and Fire (1).png",
+    "upright": "Shadow work, breaking cycles.",
+    "reversed": "Release, reclaim your power."
+  },
+  {
+    "name": "Loss & Reflection at Sunset",
+    "image": "assets/cards/Loss and Reflection at Sunset.png",
+    "upright": "Closure, honoring grief, wisdom.",
+    "reversed": "Stuck in the past\u2014gently move forward."
+  }
+]

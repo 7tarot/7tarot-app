@@ -1,0 +1,37 @@
+[
+  {
+    "name": "1 Question Reading",
+    "type": "digital",
+    "price": "\u00a315.00",
+    "image": "assets/cards/Page of Cups_ Digital Reflection.png",
+    "url": "https://7tarot.bigcartel.com/product/1-question-reading"
+  },
+  {
+    "name": "3 Question Mini Reading",
+    "type": "digital",
+    "price": "\u00a325.00",
+    "image": "assets/cards/3 of wands.png",
+    "url": "https://7tarot.bigcartel.com/product/3-question-mini-reading"
+  },
+  {
+    "name": "Personal Tarot Reading",
+    "type": "digital",
+    "price": "\u00a360.00",
+    "image": "assets/cards/10 of Cups.png",
+    "url": "https://7tarot.bigcartel.com/product/personal-tarot-reading"
+  },
+  {
+    "name": "Channelled Messages",
+    "type": "digital",
+    "price": "\u00a3100.00",
+    "image": "assets/cards/Ace of Swords_ Digital Reflection.png",
+    "url": "https://7tarot.bigcartel.com/product/channelled-messages"
+  },
+  {
+    "name": "7Tarot Deck (Physical)",
+    "type": "physical",
+    "price": "\u00a360.00",
+    "image": "assets/cards/Loss and Reflection at Sunset.png",
+    "url": "https://7tarot.bigcartel.com/product/the-fith-cup"
+  }
+]
