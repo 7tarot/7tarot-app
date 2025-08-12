@@ -1,0 +1,548 @@
+[
+  {
+    "name": "the hanged man",
+    "image": "assets/cards/the-hanged-man.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "The hierophant",
+    "image": "assets/cards/the-hierophant.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "The world",
+    "image": "assets/cards/the-world.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "The wheel of fortunes",
+    "image": "assets/cards/the-wheel-of-fortunes.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "Ace of pentacles",
+    "image": "assets/cards/ace-of-pentacles.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "Two of pentacles",
+    "image": "assets/cards/two-of-pentacles.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "Three of pentacles",
+    "image": "assets/cards/three-of-pentacles.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "4 of pentacles",
+    "image": "assets/cards/4-of-pentacles.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "Page of wands",
+    "image": "assets/cards/page-of-wands.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "knight of wands",
+    "image": "assets/cards/knight-of-wands.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "king of wands",
+    "image": "assets/cards/king-of-wands.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "queen of wands",
+    "image": "assets/cards/queen-of-wands.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "Justice",
+    "image": "assets/cards/justice.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "Temperance",
+    "image": "assets/cards/temperance.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "death",
+    "image": "assets/cards/death.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "judgement",
+    "image": "assets/cards/judgement.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "King of cups",
+    "image": "assets/cards/king-of-cups.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "Queen of Cups",
+    "image": "assets/cards/queen-of-cups.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "Ace of Swords",
+    "image": "assets/cards/ace-of-swords.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "2 Of swords",
+    "image": "assets/cards/2-of-swords.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "The Empress",
+    "image": "assets/cards/the-empress.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "The emperor",
+    "image": "assets/cards/the-emperor.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "The sun",
+    "image": "assets/cards/the-sun.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "The star",
+    "image": "assets/cards/the-star.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "9 Of pentacles",
+    "image": "assets/cards/9-of-pentacles.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "10 of pentacles",
+    "image": "assets/cards/10-of-pentacles.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "Night of pentacles",
+    "image": "assets/cards/night-of-pentacles.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "page of pentacles",
+    "image": "assets/cards/page-of-pentacles.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "5 of cups",
+    "image": "assets/cards/5-of-cups.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "6 of cups",
+    "image": "assets/cards/6-of-cups.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "7 of cups",
+    "image": "assets/cards/7-of-cups.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "8 of cups",
+    "image": "assets/cards/8-of-cups.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "4 of wands",
+    "image": "assets/cards/4-of-wands.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "5 of wands",
+    "image": "assets/cards/5-of-wands.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "6 of wands",
+    "image": "assets/cards/6-of-wands.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "7 of wands",
+    "image": "assets/cards/7-of-wands.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "7 of Swords",
+    "image": "assets/cards/7-of-swords.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "8 Of swords",
+    "image": "assets/cards/8-of-swords.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "9 of Swords",
+    "image": "assets/cards/9-of-swords.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "10 of swords",
+    "image": "assets/cards/10-of-swords.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "The tower",
+    "image": "assets/cards/the-tower.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "the fool",
+    "image": "assets/cards/the-fool.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "The magician",
+    "image": "assets/cards/the-magician.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "The High Priestess",
+    "image": "assets/cards/the-high-priestess.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "5 for pentacles",
+    "image": "assets/cards/5-for-pentacles.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "6 Of pentacles",
+    "image": "assets/cards/6-of-pentacles.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "7 Of pentacles",
+    "image": "assets/cards/7-of-pentacles.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "8 Of pentacles",
+    "image": "assets/cards/8-of-pentacles.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "Ace of cups",
+    "image": "assets/cards/ace-of-cups.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "Two of cups",
+    "image": "assets/cards/two-of-cups.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "Three of Cups",
+    "image": "assets/cards/three-of-cups.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "4 of cups",
+    "image": "assets/cards/4-of-cups.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "The lovers",
+    "image": "assets/cards/the-lovers.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "Strength",
+    "image": "assets/cards/strength.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "2 of wands",
+    "image": "assets/cards/2-of-wands.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "3 of wands",
+    "image": "assets/cards/3-of-wands.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "3 of words",
+    "image": "assets/cards/3-of-words.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "4 of words",
+    "image": "assets/cards/4-of-words.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "5 of words",
+    "image": "assets/cards/5-of-words.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "6 of words",
+    "image": "assets/cards/6-of-words.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "the moon",
+    "image": "assets/cards/the-moon.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "The hermit",
+    "image": "assets/cards/the-hermit.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "The devil",
+    "image": "assets/cards/the-devil.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "The Chariot",
+    "image": "assets/cards/the-chariot.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "King of pentacles",
+    "image": "assets/cards/king-of-pentacles.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "Queen of pentacles",
+    "image": "assets/cards/queen-of-pentacles.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "Thank you card skip this",
+    "image": "assets/cards/thank-you-card-skip-this.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "Thank you card skip this",
+    "image": "assets/cards/thank-you-card-skip-this.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "9 of Cups",
+    "image": "assets/cards/9-of-cups.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "10 of cups",
+    "image": "assets/cards/10-of-cups.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "Page of cups",
+    "image": "assets/cards/page-of-cups.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "Knight of Cups",
+    "image": "assets/cards/knight-of-cups.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "8 of wands",
+    "image": "assets/cards/8-of-wands.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "9 of wands",
+    "image": "assets/cards/9-of-wands.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "10 of wands",
+    "image": "assets/cards/10-of-wands.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "Ace of wands",
+    "image": "assets/cards/ace-of-wands.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "Page of swords",
+    "image": "assets/cards/page-of-swords.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  },
+  {
+    "name": "Knight of swords",
+    "image": "assets/cards/knight-of-swords.png",
+    "upright": "nan",
+    "reversed": "(to add later)",
+    "keywords": []
+  }
+]
