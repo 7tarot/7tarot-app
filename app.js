@@ -1,14 +1,15 @@
 
-// 7TAROT Storefront + Raffle section
-// ********* EDIT THIS RAFFLE CONFIG ONLY *********
+// 7TAROT Storefront + Raffle section (Drag-and-drop bundle)
+
+// ***** EDIT THIS RAFFLE CONFIG *****
+// Update url/title/endsAt/image here whenever you run a new raffle.
 const RAFFLE = {
   url: 'https://raffall.com/393853/enter-raffle-to-win-my-own-personal-tarot-deck-hosted-by-steven-billy-abbott',
   title: 'Win my personal tarot deck',
-  // Set your real end time here (Europe/London). Example: '2025-09-05T22:00:00+01:00'
-  endsAt: '2025-09-05T22:00:00+01:00',
-  image: 'assets/raffle-placeholder.png' // replace with your deck image if you have one
+  endsAt: '', // e.g. '2025-09-05T22:00:00+01:00' (Europe/London). Leave blank to show 'Ends soon'.
+  image: 'assets/raffle-placeholder.png'
 };
-// ***********************************************
+// ***********************************
 
 const SUBDOMAIN = '7tarot';
 const API_BASE = `https://api.bigcartel.com/${SUBDOMAIN}`;
@@ -125,8 +126,9 @@ function renderRaffle() {
   });
 
   // Countdown
-  const end = new Date(RAFFLE.endsAt || '');
-  if (!isNaN(end.valueOf())) {
+  const endsAt = RAFFLE.endsAt;
+  const end = endsAt ? new Date(endsAt) : null;
+  if (end && !isNaN(end.valueOf())) {
     const tick = () => {
       const now = new Date();
       const diff = end - now;
