@@ -1,26 +1,19 @@
-// 7TAROT — RAFFLE CONFIG (paste at top of app.js)
+// 7TAROT Storefront + Raffle — RESET
+// Edit the RAFFLE block below when you run a new raffle.
+
 const RAFFLE = {
   url: 'https://raffall.com/393853/enter-raffle-to-win-my-own-personal-tarot-deck-hosted-by-steven-billy-abbott',
   title: 'Win my personal tarot deck',
   startsAt: '', // already open
   endsAt: '2025-09-10T11:28:00+01:00', // Wed, 10 Sept 2025, 11:28 (BST, UK)
-  image: 'assets/raffle-placeholder.png' // keep placeholder for now; swap later if you like
-};
-// 7TAROT Storefront + Raffle — HOTFIX
-// Drop this app.js into your repo root (replace the old one).
-// Image is wired to assets/raffle-deck-600.jpg included in this zip.
-
-const RAFFLE = {
-  url: 'https://raffall.com/393853/enter-raffle-to-win-my-own-personal-tarot-deck-hosted-by-steven-billy-abbott',
-  title: 'Win my personal tarot deck',
-  startsAt: '', // e.g. '2025-08-25T20:00:00+01:00' (UK time) — leave blank if already open
-  endsAt:   '', // e.g. '2025-09-05T22:00:00+01:00' — fill to show countdown
-  image: 'assets/raffle-deck-600.jpg'
+  image: 'assets/raffle-placeholder.png' // swap later if you upload another file to /assets/
 };
 
+// Big Cartel public API (read‑only)
 const SUBDOMAIN = '7tarot';
 const API_BASE = `https://api.bigcartel.com/${SUBDOMAIN}`;
 
+// Shorthands & elements
 const $ = (sel) => document.querySelector(sel);
 const grid = $('#grid');
 const filters = $('#filters');
@@ -50,10 +43,10 @@ function renderProducts(items, currency='GBP', locale='en-GB') {
   if (!grid) return;
   grid.innerHTML = '';
   if (!items.length) {
-    empty && (empty.style.display = 'block');
+    if (empty) empty.style.display = 'block';
     return;
   }
-  empty && (empty.style.display = 'none');
+  if (empty) empty.style.display = 'none';
   const frag = document.createDocumentFragment();
   for (const p of items) {
     const img = (p.images && p.images[0] && (p.images[0].secure_url || p.images[0].url)) || '';
@@ -104,7 +97,7 @@ let PRODUCTS = [];
 let STORE = null;
 let CURRENT = [];
 
-function apply({ q = input?.value.trim().toLowerCase() || '', cat = null } = {}) {
+function apply({ q = (input?.value || '').trim().toLowerCase(), cat = null } = {}) {
   let list = PRODUCTS.slice();
   if (q) list = list.filter(p => (p.name || '').toLowerCase().includes(q) || (p.description || '').toLowerCase().includes(q));
   if (cat) list = list.filter(p => (p.categories || []).some(c => c.name === cat));
@@ -115,10 +108,8 @@ function apply({ q = input?.value.trim().toLowerCase() || '', cat = null } = {})
 }
 
 function humanDate(dt) {
-  try {
-    const d = new Date(dt);
-    return d.toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' });
-  } catch { return ''; }
+  try { return new Date(dt).toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' }); }
+  catch { return ''; }
 }
 
 function renderRaffle() {
@@ -127,7 +118,6 @@ function renderRaffle() {
   const ends = $('#raffle-ends');
   const enter = $('#raffle-enter');
   const copy = $('#raffle-copy');
-
   if (!img || !title || !ends || !enter || !copy) return;
 
   title.textContent = RAFFLE.title || 'Raffle';
@@ -143,7 +133,6 @@ function renderRaffle() {
   const startTxt = RAFFLE.startsAt ? `Opens: ${humanDate(RAFFLE.startsAt)}` : '';
   let statusLine = startTxt;
 
-  // Countdown logic
   const end = RAFFLE.endsAt ? new Date(RAFFLE.endsAt) : null;
   if (end && !isNaN(end.valueOf())) {
     const tick = () => {
@@ -173,7 +162,7 @@ async function init() {
     console.error(e);
     if (grid) grid.innerHTML = '<div style="padding:24px;color:#ffb3b3">Could not load products. If this persists, CORS may be blocking requests to api.bigcartel.com from your domain. I can give you a tiny Netlify proxy if needed.</div>';
   }
-  input && input.addEventListener('input', () => apply());
+  if (input) input.addEventListener('input', () => apply());
   renderRaffle();
   matrixRain();
 }
@@ -204,4 +193,5 @@ function matrixRain() {
   draw();
 }
 
+init();
 init();
