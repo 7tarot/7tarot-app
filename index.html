@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>7 Tarot — Shop</title>
-    <meta name="description" content="7 Tarot — Shop Steve's decks, readings, and digital downloads" />
+    <title>7TAROT — Shop, Readings & Courses</title>
+    <meta name="description" content="7TAROT — Readings, courses, and handmade tarot decks by Steve." />
     <style>
       :root {
         --bg: #0a0f0a;
@@ -18,17 +18,31 @@
       * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
       html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text);
         font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
-      .wrap { min-height: 100svh; display: flex; flex-direction: column; gap: 16px; }
-      header { position: relative; padding: 16px; display: grid; gap: 10px; }
-      .brand { text-align: center; font-weight: 800; letter-spacing: 1px; font-size: 1.4rem; }
+      a { color: var(--text); text-decoration: none; }
+      .wrap { min-height: 100svh; display: flex; flex-direction: column; gap: 16px; position: relative; }
+      /* Matrix background */
+      canvas#matrix { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; opacity: 0.25; }
+      header { position: relative; z-index: 1; padding: 12px 16px; border-bottom: 1px dashed var(--border); backdrop-filter: blur(0px); }
+      .topbar { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; }
+      .brand { font-weight: 900; letter-spacing: 1px; font-size: 1.4rem; text-transform: uppercase; }
       .brand span { color: var(--purple); text-shadow: 0 0 12px var(--glow); }
-      .search-row { display: grid; grid-template-columns: 1fr auto; gap: 10px; max-width: 720px; margin: 0 auto; width: 100%; }
+      nav { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; justify-content: flex-end; }
+      nav a { font-size: .95rem; opacity: .9; }
+      nav a:hover { opacity: 1; text-shadow: 0 0 6px var(--glow); }
+      .hero { text-align: center; padding: 8px 16px 0; }
+      .hero h1 { margin: 8px 0 2px; font-size: 1.9rem; letter-spacing: 1px; }
+      .hero .tag { color: var(--muted); font-size: .95rem; }
+      main { position: relative; z-index: 1; padding: 6px 16px 24px; }
+      section { margin: 20px auto; max-width: 1100px; }
+      h2 { margin: 12px 0; font-size: 1.4rem; }
+      /* Product grid */
+      .controls { display: grid; grid-template-columns: 1fr auto; gap: 10px; max-width: 800px; margin: 0 auto 10px; }
       input[type="search"] {
         padding: 12px 14px; border-radius: 12px; border: 1px solid var(--border); background: rgba(16,24,18,0.8);
         color: var(--text); outline: none;
       }
-      .filter { display: flex; gap: 8px; align-items: center; justify-content: center; flex-wrap: wrap; font-size: .9rem; color: var(--muted); }
-      main { position: relative; z-index: 1; padding: 0 16px 24px; }
+      .filters { display: flex; gap: 8px; align-items: center; justify-content: center; flex-wrap: wrap; font-size: .9rem; color: var(--muted); }
+      .badge { font-size: .75rem; border: 1px solid rgba(167,128,255,0.35); padding: 4px 10px; border-radius: 999px; color: var(--muted); background: rgba(16,24,18,0.6); }
       .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
       @media (min-width: 680px) { .grid { grid-template-columns: repeat(3, 1fr); } }
       @media (min-width: 980px) { .grid { grid-template-columns: repeat(4, 1fr); } }
@@ -44,7 +58,6 @@
       .name { font-weight: 700; padding: 0 12px; }
       .price-row { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 0 12px; color: var(--muted); font-size: .95rem; }
       .price { font-weight: 800; color: var(--text); }
-      .badge { font-size: .75rem; border: 1px solid rgba(167,128,255,0.35); padding: 2px 8px; border-radius: 999px; color: var(--muted); }
       .cta-row { padding: 8px 12px 12px; display: grid; grid-template-columns: 1fr; gap: 8px; }
       a.buy, a.view {
         display: inline-block; text-align: center; padding: 12px 14px; border-radius: 12px; text-decoration: none;
@@ -52,44 +65,69 @@
         background: rgba(0,255,156,0.10); color: var(--text);
       }
       a.buy:hover { background: rgba(0,255,156,0.16); }
-      .contact { padding: 12px 16px; border-top: 1px dashed var(--border); display: grid; gap: 10px; }
-      .contact h3 { margin: 0; font-size: 0.95rem; color: var(--muted); }
-      .cta-contacts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-      a.cta { display: inline-block; text-align: center; padding: 12px 14px; border-radius: 12px; text-decoration: none; color: #0b0f0c;
-        background: linear-gradient(180deg, var(--glow), #72ffc9); font-weight: 800; }
-      a.cta.messenger { background: linear-gradient(180deg, var(--purple), #c7b0ff); color: #0b0f0c; }
-      footer { text-align: center; color: var(--muted); padding: 16px; font-size: .85rem; }
-      /* Light Matrix rain background */
-      canvas#matrix { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; opacity: 0.25; }
+      .btn {
+        display:inline-block;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:rgba(0,255,156,0.08);
+        color:var(--text);font-weight:800;letter-spacing:.4px;text-align:center;
+      }
+      .row { display: grid; grid-template-columns: 1fr; gap: 10px; }
+      .cta-inline { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; }
+      footer { text-align: center; color: var(--muted); padding: 20px; font-size: .85rem; }
     </style>
   </head>
   <body>
     <canvas id="matrix"></canvas>
     <div class="wrap">
       <header>
-        <div class="brand">SEVEN <span>TAROT</span> — Shop</div>
-        <div class="search-row">
-          <input id="q" type="search" placeholder="Search products…" />
-          <button id="clear" aria-label="Clear search">Clear</button>
+        <div class="topbar">
+          <div class="brand"><span>7TAROT</span></div>
+          <nav>
+            <a href="#shop">Shop</a>
+            <a href="#daily">Daily Draw</a>
+            <a href="#meanings">Meanings</a>
+            <a href="https://wa.me/447527171238" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="https://m.me/sunhouse76" target="_blank" rel="noopener">Messenger</a>
+          </nav>
         </div>
-        <div class="filter" id="filters"></div>
+        <div class="hero">
+          <h1>7TAROT</h1>
+          <div class="tag">Readings • Courses • Decks</div>
+          <div class="cta-inline" style="margin-top:8px;">
+            <a class="btn" href="#shop">Shop</a>
+            <a class="btn" href="#daily">Daily Draw</a>
+          </div>
+        </div>
       </header>
 
       <main>
-        <div id="grid" class="grid" aria-live="polite"></div>
-        <div id="empty" style="display:none; text-align:center; color:var(--muted); padding:24px;">No products found.</div>
+        <section id="shop" aria-labelledby="shop-title">
+          <h2 id="shop-title">Shop</h2>
+          <div class="controls">
+            <input id="q" type="search" placeholder="Search products…" />
+            <a class="btn" href="https://7tarot.bigcartel.com" target="_blank" rel="noopener">Open Full Store</a>
+          </div>
+          <div id="filters" class="filters"></div>
+          <div id="grid" class="grid" aria-live="polite"></div>
+          <div id="empty" style="display:none; text-align:center; color:var(--muted); padding:24px;">No products found.</div>
+        </section>
+
+        <section id="daily" aria-labelledby="daily-title">
+          <h2 id="daily-title">Daily Card</h2>
+          <div class="row">
+            <a class="btn" href="#shop" onclick="alert('Daily Draw coming back later — shop is live now.');">Draw Today's Card</a>
+          </div>
+        </section>
+
+        <section id="meanings" aria-labelledby="meanings-title">
+          <h2 id="meanings-title">Card Meanings</h2>
+          <div class="row" style="color:var(--muted)">
+            <div>Quick meanings are coming back soon. For personal guidance, message me any time.</div>
+          </div>
+        </section>
       </main>
 
-      <section class="contact">
-        <h3>Questions? Book a reading:</h3>
-        <div class="cta-contacts">
-          <a class="cta whatsapp" href="https://wa.me/447527171238" target="_blank" rel="noopener">WhatsApp</a>
-          <a class="cta messenger" href="https://m.me/sunhouse76" target="_blank" rel="noopener">Messenger</a>
-        </div>
-      </section>
-
-      <footer>© <span id="year"></span> 7 Tarot — Powered by Big Cartel</footer>
+      <footer>© <span id="year"></span> 7TAROT — Powered by Big Cartel</footer>
     </div>
-    <script src="app.js?v=shop1" defer></script>
+
+    <script src="app.js?v=shop2" defer></script>
   </body>
 </html>

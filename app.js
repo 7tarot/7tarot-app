@@ -1,7 +1,5 @@
 
-// 7 Tarot Storefront — Big Cartel v0 API
-// Docs: https://developers.bigcartel.com/api/v0
-// Fetch products from https://api.bigcartel.com/{subdomain}/products.json
+// 7TAROT Storefront — pulls products from Big Cartel API
 const SUBDOMAIN = '7tarot';
 const API_BASE = `https://api.bigcartel.com/${SUBDOMAIN}`;
 
@@ -107,7 +105,6 @@ async function init() {
   }
   // Search events
   input.addEventListener('input', () => apply());
-  document.getElementById('clear').addEventListener('click', () => { input.value=''; apply(); });
   // Matrix rain background
   matrixRain();
 }
