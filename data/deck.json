@@ -2,7 +2,7 @@
   "cards": [
     {
       "arcana": "Major",
-      "number": 0,
+      "number": 1,
       "name": "The Fool",
       "slug": "the-fool",
       "image": "assets/cards/the-fool.png",
@@ -11,7 +11,7 @@
     },
     {
       "arcana": "Major",
-      "number": 1,
+      "number": 2,
       "name": "The Magician",
       "slug": "the-magician",
       "image": "assets/cards/the-magician.png",
@@ -20,7 +20,7 @@
     },
     {
       "arcana": "Major",
-      "number": 2,
+      "number": 3,
       "name": "The High Priestess",
       "slug": "the-high-priestess",
       "image": "assets/cards/the-high-priestess.png",
@@ -29,7 +29,7 @@
     },
     {
       "arcana": "Major",
-      "number": 3,
+      "number": 4,
       "name": "The Empress",
       "slug": "the-empress",
       "image": "assets/cards/the-empress.png",
@@ -38,7 +38,7 @@
     },
     {
       "arcana": "Major",
-      "number": 4,
+      "number": 5,
       "name": "The Emperor",
       "slug": "the-emperor",
       "image": "assets/cards/the-emperor.png",
@@ -47,7 +47,7 @@
     },
     {
       "arcana": "Major",
-      "number": 5,
+      "number": 6,
       "name": "The Hierophant",
       "slug": "the-hierophant",
       "image": "assets/cards/the-hierophant.png",
@@ -56,7 +56,7 @@
     },
     {
       "arcana": "Major",
-      "number": 6,
+      "number": 7,
       "name": "The Lovers",
       "slug": "the-lovers",
       "image": "assets/cards/the-lovers.png",
@@ -65,7 +65,7 @@
     },
     {
       "arcana": "Major",
-      "number": 7,
+      "number": 8,
       "name": "The Chariot",
       "slug": "the-chariot",
       "image": "assets/cards/the-chariot.png",
@@ -74,7 +74,7 @@
     },
     {
       "arcana": "Major",
-      "number": 8,
+      "number": 9,
       "name": "Strength",
       "slug": "strength",
       "image": "assets/cards/strength.png",
@@ -83,7 +83,7 @@
     },
     {
       "arcana": "Major",
-      "number": 9,
+      "number": 10,
       "name": "The Hermit",
       "slug": "the-hermit",
       "image": "assets/cards/the-hermit.png",
@@ -92,7 +92,7 @@
     },
     {
       "arcana": "Major",
-      "number": 10,
+      "number": 11,
       "name": "Wheel of Fortune",
       "slug": "wheel-of-fortune",
       "image": "assets/cards/wheel-of-fortune.png",
@@ -101,7 +101,7 @@
     },
     {
       "arcana": "Major",
-      "number": 11,
+      "number": 12,
       "name": "Justice",
       "slug": "justice",
       "image": "assets/cards/justice.png",
@@ -110,7 +110,7 @@
     },
     {
       "arcana": "Major",
-      "number": 12,
+      "number": 13,
       "name": "The Hanged Man",
       "slug": "the-hanged-man",
       "image": "assets/cards/the-hanged-man.png",
@@ -119,7 +119,7 @@
     },
     {
       "arcana": "Major",
-      "number": 13,
+      "number": 14,
       "name": "Death",
       "slug": "death",
       "image": "assets/cards/death.png",
@@ -128,7 +128,7 @@
     },
     {
       "arcana": "Major",
-      "number": 14,
+      "number": 15,
       "name": "Temperance",
       "slug": "temperance",
       "image": "assets/cards/temperance.png",
@@ -137,7 +137,7 @@
     },
     {
       "arcana": "Major",
-      "number": 15,
+      "number": 16,
       "name": "The Devil",
       "slug": "the-devil",
       "image": "assets/cards/the-devil.png",
@@ -146,7 +146,7 @@
     },
     {
       "arcana": "Major",
-      "number": 16,
+      "number": 17,
       "name": "The Tower",
       "slug": "the-tower",
       "image": "assets/cards/the-tower.png",
@@ -155,7 +155,7 @@
     },
     {
       "arcana": "Major",
-      "number": 17,
+      "number": 18,
       "name": "The Star",
       "slug": "the-star",
       "image": "assets/cards/the-star.png",
@@ -164,7 +164,7 @@
     },
     {
       "arcana": "Major",
-      "number": 18,
+      "number": 19,
       "name": "The Moon",
       "slug": "the-moon",
       "image": "assets/cards/the-moon.png",
@@ -173,7 +173,7 @@
     },
     {
       "arcana": "Major",
-      "number": 19,
+      "number": 20,
       "name": "The Sun",
       "slug": "the-sun",
       "image": "assets/cards/the-sun.png",
@@ -182,16 +182,16 @@
     },
     {
       "arcana": "Major",
-      "number": 20,
-      "name": "Judgement",
-      "slug": "judgement",
-      "image": "assets/cards/judgement.png",
+      "number": 21,
+      "name": "Judgment",
+      "slug": "judgment",
+      "image": "assets/cards/judgment.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     },
     {
       "arcana": "Major",
-      "number": 21,
+      "number": 22,
       "name": "The World",
       "slug": "the-world",
       "image": "assets/cards/the-world.png",
