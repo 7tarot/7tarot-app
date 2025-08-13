@@ -5,7 +5,7 @@
       "number": 1,
       "name": "The Fool",
       "slug": "the-fool",
-      "image": "assets/cards/the-fool.png",
+      "image": "assets/cards/01-the-fool.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     },
@@ -14,7 +14,7 @@
       "number": 2,
       "name": "The Magician",
       "slug": "the-magician",
-      "image": "assets/cards/the-magician.png",
+      "image": "assets/cards/02-the-magician.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     },
@@ -23,7 +23,7 @@
       "number": 3,
       "name": "The High Priestess",
       "slug": "the-high-priestess",
-      "image": "assets/cards/the-high-priestess.png",
+      "image": "assets/cards/03-the-high-priestess.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     },
@@ -32,7 +32,7 @@
       "number": 4,
       "name": "The Empress",
       "slug": "the-empress",
-      "image": "assets/cards/the-empress.png",
+      "image": "assets/cards/04-the-empress.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     },
@@ -41,7 +41,7 @@
       "number": 5,
       "name": "The Emperor",
       "slug": "the-emperor",
-      "image": "assets/cards/the-emperor.png",
+      "image": "assets/cards/05-the-emperor.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     },
@@ -50,7 +50,7 @@
       "number": 6,
       "name": "The Hierophant",
       "slug": "the-hierophant",
-      "image": "assets/cards/the-hierophant.png",
+      "image": "assets/cards/06-the-hierophant.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     },
@@ -59,7 +59,7 @@
       "number": 7,
       "name": "The Lovers",
       "slug": "the-lovers",
-      "image": "assets/cards/the-lovers.png",
+      "image": "assets/cards/07-the-lovers.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     },
@@ -68,7 +68,7 @@
       "number": 8,
       "name": "The Chariot",
       "slug": "the-chariot",
-      "image": "assets/cards/the-chariot.png",
+      "image": "assets/cards/08-the-chariot.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     },
@@ -77,7 +77,7 @@
       "number": 9,
       "name": "Strength",
       "slug": "strength",
-      "image": "assets/cards/strength.png",
+      "image": "assets/cards/09-strength.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     },
@@ -86,7 +86,7 @@
       "number": 10,
       "name": "The Hermit",
       "slug": "the-hermit",
-      "image": "assets/cards/the-hermit.png",
+      "image": "assets/cards/10-the-hermit.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     },
@@ -95,7 +95,7 @@
       "number": 11,
       "name": "Wheel of Fortune",
       "slug": "wheel-of-fortune",
-      "image": "assets/cards/wheel-of-fortune.png",
+      "image": "assets/cards/11-wheel-of-fortune.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     },
@@ -104,7 +104,7 @@
       "number": 12,
       "name": "Justice",
       "slug": "justice",
-      "image": "assets/cards/justice.png",
+      "image": "assets/cards/12-justice.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     },
@@ -113,7 +113,7 @@
       "number": 13,
       "name": "The Hanged Man",
       "slug": "the-hanged-man",
-      "image": "assets/cards/the-hanged-man.png",
+      "image": "assets/cards/13-the-hanged-man.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     },
@@ -122,7 +122,7 @@
       "number": 14,
       "name": "Death",
       "slug": "death",
-      "image": "assets/cards/death.png",
+      "image": "assets/cards/14-death.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     },
@@ -131,7 +131,7 @@
       "number": 15,
       "name": "Temperance",
       "slug": "temperance",
-      "image": "assets/cards/temperance.png",
+      "image": "assets/cards/15-temperance.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     },
@@ -140,7 +140,7 @@
       "number": 16,
       "name": "The Devil",
       "slug": "the-devil",
-      "image": "assets/cards/the-devil.png",
+      "image": "assets/cards/16-the-devil.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     },
@@ -149,7 +149,7 @@
       "number": 17,
       "name": "The Tower",
       "slug": "the-tower",
-      "image": "assets/cards/the-tower.png",
+      "image": "assets/cards/17-the-tower.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     },
@@ -158,7 +158,7 @@
       "number": 18,
       "name": "The Star",
       "slug": "the-star",
-      "image": "assets/cards/the-star.png",
+      "image": "assets/cards/18-the-star.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     },
@@ -167,7 +167,7 @@
       "number": 19,
       "name": "The Moon",
       "slug": "the-moon",
-      "image": "assets/cards/the-moon.png",
+      "image": "assets/cards/19-the-moon.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     },
@@ -176,7 +176,7 @@
       "number": 20,
       "name": "The Sun",
       "slug": "the-sun",
-      "image": "assets/cards/the-sun.png",
+      "image": "assets/cards/20-the-sun.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     },
@@ -185,7 +185,7 @@
       "number": 21,
       "name": "Judgment",
       "slug": "judgment",
-      "image": "assets/cards/judgment.png",
+      "image": "assets/cards/21-judgment.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     },
@@ -194,7 +194,7 @@
       "number": 22,
       "name": "The World",
       "slug": "the-world",
-      "image": "assets/cards/the-world.png",
+      "image": "assets/cards/22-the-world.png",
       "upright": "Clear guidance: listen, choose, and act with compassion.",
       "reversed": "Gentle correction: simplify, release, and try one small step."
     }
