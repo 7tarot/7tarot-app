@@ -1,5 +1,15 @@
 
-// 7TAROT Storefront — pulls products from Big Cartel API
+// 7TAROT Storefront + Raffle section
+// ********* EDIT THIS RAFFLE CONFIG ONLY *********
+const RAFFLE = {
+  url: 'https://raffall.com/393853/enter-raffle-to-win-my-own-personal-tarot-deck-hosted-by-steven-billy-abbott',
+  title: 'Win my personal tarot deck',
+  // Set your real end time here (Europe/London). Example: '2025-09-05T22:00:00+01:00'
+  endsAt: '2025-09-05T22:00:00+01:00',
+  image: 'assets/raffle-placeholder.png' // replace with your deck image if you have one
+};
+// ***********************************************
+
 const SUBDOMAIN = '7tarot';
 const API_BASE = `https://api.bigcartel.com/${SUBDOMAIN}`;
 
@@ -49,7 +59,6 @@ function renderProducts(items, currency='GBP', locale='en-GB') {
       <div class="name">${p.name}</div>
       <div class="price-row">
         <div class="price">${money(price, currency, locale)}</div>
-        <div class="badge">${p.categories?.[0]?.name || ''}</div>
       </div>
       <div class="cta-row">
         ${soldOut ? `<a class="buy" href="${url}" target="_blank" rel="noopener">View (Sold Out)</a>` :
@@ -65,6 +74,7 @@ function buildFilters(items) {
   const cats = new Set();
   items.forEach(p => (p.categories || []).forEach(c => cats.add(c.name)));
   filters.innerHTML = '';
+  if (!cats.size) return;
   const allBtn = document.createElement('button');
   allBtn.textContent = 'All';
   allBtn.className = 'badge';
@@ -93,6 +103,47 @@ function apply({ q = input.value.trim().toLowerCase(), cat = null } = {}) {
   renderProducts(list, currency, locale);
 }
 
+function renderRaffle() {
+  const img = $('#raffle-img');
+  const title = $('#raffle-title-text');
+  const ends = $('#raffle-ends');
+  const enter = $('#raffle-enter');
+  const copy = $('#raffle-copy');
+
+  if (!RAFFLE || !RAFFLE.url) {
+    document.getElementById('raffle').style.display = 'none';
+    return;
+  }
+  img.src = RAFFLE.image || 'assets/raffle-placeholder.png';
+  title.textContent = RAFFLE.title || 'Raffle';
+
+  const url = RAFFLE.url;
+  enter.href = url;
+  copy.addEventListener('click', (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(url).then(() => { copy.textContent = 'Link Copied!'; setTimeout(()=> copy.textContent='Copy Link', 1500); });
+  });
+
+  // Countdown
+  const end = new Date(RAFFLE.endsAt || '');
+  if (!isNaN(end.valueOf())) {
+    const tick = () => {
+      const now = new Date();
+      const diff = end - now;
+      if (diff <= 0) { ends.textContent = 'Raffle closed'; return; }
+      const d = Math.floor(diff / (1000*60*60*24));
+      const h = Math.floor((diff / (1000*60*60)) % 24);
+      const m = Math.floor((diff / (1000*60)) % 60);
+      const s = Math.floor((diff / 1000) % 60);
+      ends.textContent = `Ends in: ${d}d ${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+      requestAnimationFrame(tick);
+    };
+    tick();
+  } else {
+    ends.textContent = 'Ends soon';
+  }
+}
+
 async function init() {
   try {
     STORE = await fetchStore().catch(() => null);
@@ -105,6 +156,8 @@ async function init() {
   }
   // Search events
   input.addEventListener('input', () => apply());
+  // Raffle
+  renderRaffle();
   // Matrix rain background
   matrixRain();
 }
