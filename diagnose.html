@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>7 Tarot — Diagnostics</title>
+    <style>
+      :root{--ok:#18c964;--err:#ff4d4f;--muted:#9aa7a0;--bg:#0b0f0c;--text:#e7ffee}
+      body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);margin:0;padding:16px}
+      h1{margin:0 0 10px 0} .box{border:1px solid #244; border-radius:12px; padding:12px; margin:10px 0}
+      .row{display:flex; gap:8px; align-items:center; flex-wrap:wrap}
+      .pill{padding:4px 8px; border-radius:999px; font-size:.85rem}
+      .ok{background:rgba(24,201,100,.15); border:1px solid var(--ok); color:var(--ok)}
+      .err{background:rgba(255,77,79,.12); border:1px solid var(--err); color:var(--err)}
+      code{background:#0f1412; padding:2px 6px; border-radius:6px}
+      a{color:#9ad9ff}
+      .small{color:var(--muted); font-size:.9rem}
+      ul{margin:6px 0 0 20px}
+      .grid{display:grid; gap:8px}
+      .url{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:.9rem}
+    </style>
+  </head>
+  <body>
+    <h1>🧪 7 Tarot — Diagnostics</h1>
+    <div class="small">This page won’t change your homepage. Upload it anywhere in your publish folder, then visit <code>/diagnose.html</code>.</div>
+
+    <div id="results" class="grid"></div>
+
+    <script src="diagnose.js?v=1" defer></script>
+  </body>
+</html>
