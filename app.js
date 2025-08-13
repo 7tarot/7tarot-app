@@ -1,15 +1,15 @@
 
-// 7TAROT Storefront + Raffle section (Drag-and-drop bundle)
+// 7TAROT Storefront + Raffle — HOTFIX
+// Drop this app.js into your repo root (replace the old one).
+// Image is wired to assets/raffle-deck-600.jpg included in this zip.
 
-// ***** EDIT THIS RAFFLE CONFIG *****
-// Update url/title/endsAt/image here whenever you run a new raffle.
 const RAFFLE = {
   url: 'https://raffall.com/393853/enter-raffle-to-win-my-own-personal-tarot-deck-hosted-by-steven-billy-abbott',
   title: 'Win my personal tarot deck',
-  endsAt: '', // e.g. '2025-09-05T22:00:00+01:00' (Europe/London). Leave blank to show 'Ends soon'.
-  image: 'assets/raffle-placeholder.png'
+  startsAt: '', // e.g. '2025-08-25T20:00:00+01:00' (UK time) — leave blank if already open
+  endsAt:   '', // e.g. '2025-09-05T22:00:00+01:00' — fill to show countdown
+  image: 'assets/raffle-deck-600.jpg'
 };
-// ***********************************
 
 const SUBDOMAIN = '7tarot';
 const API_BASE = `https://api.bigcartel.com/${SUBDOMAIN}`;
@@ -19,7 +19,8 @@ const grid = $('#grid');
 const filters = $('#filters');
 const input = $('#q');
 const empty = $('#empty');
-document.getElementById('year').textContent = new Date().getFullYear().toString();
+const YEAR_SPAN = document.getElementById('year');
+if (YEAR_SPAN) YEAR_SPAN.textContent = new Date().getFullYear().toString();
 
 function money(n, currency='GBP', locale='en-GB') {
   try { return new Intl.NumberFormat(locale, { style: 'currency', currency }).format(n); }
@@ -39,12 +40,13 @@ async function fetchProducts() {
 }
 
 function renderProducts(items, currency='GBP', locale='en-GB') {
+  if (!grid) return;
   grid.innerHTML = '';
   if (!items.length) {
-    empty.style.display = 'block';
+    empty && (empty.style.display = 'block');
     return;
   }
-  empty.style.display = 'none';
+  empty && (empty.style.display = 'none');
   const frag = document.createDocumentFragment();
   for (const p of items) {
     const img = (p.images && p.images[0] && (p.images[0].secure_url || p.images[0].url)) || '';
@@ -72,6 +74,7 @@ function renderProducts(items, currency='GBP', locale='en-GB') {
 }
 
 function buildFilters(items) {
+  if (!filters) return;
   const cats = new Set();
   items.forEach(p => (p.categories || []).forEach(c => cats.add(c.name)));
   filters.innerHTML = '';
@@ -94,7 +97,7 @@ let PRODUCTS = [];
 let STORE = null;
 let CURRENT = [];
 
-function apply({ q = input.value.trim().toLowerCase(), cat = null } = {}) {
+function apply({ q = input?.value.trim().toLowerCase() || '', cat = null } = {}) {
   let list = PRODUCTS.slice();
   if (q) list = list.filter(p => (p.name || '').toLowerCase().includes(q) || (p.description || '').toLowerCase().includes(q));
   if (cat) list = list.filter(p => (p.categories || []).some(c => c.name === cat));
@@ -104,6 +107,13 @@ function apply({ q = input.value.trim().toLowerCase(), cat = null } = {}) {
   renderProducts(list, currency, locale);
 }
 
+function humanDate(dt) {
+  try {
+    const d = new Date(dt);
+    return d.toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' });
+  } catch { return ''; }
+}
+
 function renderRaffle() {
   const img = $('#raffle-img');
   const title = $('#raffle-title-text');
@@ -111,12 +121,10 @@ function renderRaffle() {
   const enter = $('#raffle-enter');
   const copy = $('#raffle-copy');
 
-  if (!RAFFLE || !RAFFLE.url) {
-    document.getElementById('raffle').style.display = 'none';
-    return;
-  }
-  img.src = RAFFLE.image || 'assets/raffle-placeholder.png';
+  if (!img || !title || !ends || !enter || !copy) return;
+
   title.textContent = RAFFLE.title || 'Raffle';
+  img.src = RAFFLE.image || 'assets/raffle-placeholder.png';
 
   const url = RAFFLE.url;
   enter.href = url;
@@ -125,24 +133,26 @@ function renderRaffle() {
     navigator.clipboard.writeText(url).then(() => { copy.textContent = 'Link Copied!'; setTimeout(()=> copy.textContent='Copy Link', 1500); });
   });
 
-  // Countdown
-  const endsAt = RAFFLE.endsAt;
-  const end = endsAt ? new Date(endsAt) : null;
+  const startTxt = RAFFLE.startsAt ? `Opens: ${humanDate(RAFFLE.startsAt)}` : '';
+  let statusLine = startTxt;
+
+  // Countdown logic
+  const end = RAFFLE.endsAt ? new Date(RAFFLE.endsAt) : null;
   if (end && !isNaN(end.valueOf())) {
     const tick = () => {
       const now = new Date();
       const diff = end - now;
-      if (diff <= 0) { ends.textContent = 'Raffle closed'; return; }
+      if (diff <= 0) { ends.textContent = (startTxt ? `${startTxt} • ` : '') + 'Raffle closed'; return; }
       const d = Math.floor(diff / (1000*60*60*24));
       const h = Math.floor((diff / (1000*60*60)) % 24);
       const m = Math.floor((diff / (1000*60)) % 60);
       const s = Math.floor((diff / 1000) % 60);
-      ends.textContent = `Ends in: ${d}d ${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+      ends.textContent = `${statusLine ? statusLine + ' • ' : ''}Ends in: ${d}d ${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
       requestAnimationFrame(tick);
     };
     tick();
   } else {
-    ends.textContent = 'Ends soon';
+    ends.textContent = `${statusLine}${statusLine ? ' • ' : ''}Ends soon`;
   }
 }
 
@@ -154,18 +164,16 @@ async function init() {
     apply({ q: '' });
   } catch (e) {
     console.error(e);
-    grid.innerHTML = '<div style="padding:24px;color:#ffb3b3">Could not load products. If this persists, CORS may be blocking requests to api.bigcartel.com from your domain. I can give you a tiny Netlify proxy if needed.</div>';
+    if (grid) grid.innerHTML = '<div style="padding:24px;color:#ffb3b3">Could not load products. If this persists, CORS may be blocking requests to api.bigcartel.com from your domain. I can give you a tiny Netlify proxy if needed.</div>';
   }
-  // Search events
-  input.addEventListener('input', () => apply());
-  // Raffle
+  input && input.addEventListener('input', () => apply());
   renderRaffle();
-  // Matrix rain background
   matrixRain();
 }
 
 function matrixRain() {
   const canvas = document.getElementById('matrix');
+  if (!canvas) return;
   const ctx = canvas.getContext('2d');
   const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
   resize(); window.addEventListener('resize', resize);
