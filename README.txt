@@ -1,14 +1,10 @@
-7TAROT — Share Preview Fix
+7TAROT — Clean Link Patch (drag & drop)
 
-Drag & drop to your repo root:
-- index.html
-- assets/og-image.png
+This patch auto-removes fbclid/gclid/utm_* from your URL so shared links look clean.
 
-Then refresh social caches:
-- Facebook Sharing Debugger: https://developers.facebook.com/tools/debug/
-  Paste https://super-semifreddo-edae3b.netlify.app and click "Debug", then "Scrape Again".
-- X/Twitter will pick up the same tags automatically.
+How to use:
+1) Unzip.
+2) GitHub → your repo → Add file → Upload files → drag **app.js** into the repo root (overwrite the existing file).
+3) Commit → Netlify redeploys → hard refresh your site.
 
-If you already have an index.html you want to keep:
-- Open your file and copy the <meta> block from this index.html into your <head>.
-- Keep assets/og-image.png uploaded in /assets/.
+No other changes needed.
