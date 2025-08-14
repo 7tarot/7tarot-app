@@ -3,11 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>7TAROT — Shop, Readings & Raffle</title>
-    <meta name="description" content="7TAROT — Readings, courses, decks, and raffles by Steve." />
+    <title>7TAROT — Shop, Raffle, Readings</title>
+    <meta name="description" content="7TAROT — Readings, courses, handmade tarot decks, and raffles by Steve." />
     <meta name="theme-color" content="#00ff9c" />
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <meta property="og:title" content="7TAROT — Shop, Raffle, Readings">
+    <meta property="og:description" content="Matrix‑mystical storefront for readings, courses, decks, and raffles by Steve.">
+    <meta property="og:image" content="https://super-semifreddo-edae3b.netlify.app/assets/og-image.png">
+    <meta property="og:url" content="https://super-semifreddo-edae3b.netlify.app">
+    <meta name="twitter:card" content="summary_large_image">
     <style>
       :root { --bg:#0a0f0a; --panel:#0d130f; --glow:#00ff9c; --purple:#a780ff; --text:#e7ffee; --muted:#9db8a8; --border:rgba(0,255,156,0.25); }
       *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent }
@@ -29,7 +34,7 @@
       .filters{ display:flex; gap:8px; align-items:center; justify-content:center; flex-wrap:wrap; font-size:.9rem; color:var(--muted) }
       .badge{ font-size:.75rem; border:1px solid rgba(167,128,255,.35); padding:4px 10px; border-radius:999px; color:var(--muted); background:rgba(16,24,18,.6) }
       .grid{ display:grid; grid-template-columns:1fr 1fr; gap:12px } @media(min-width:680px){ .grid{ grid-template-columns:repeat(3,1fr) } } @media(min-width:980px){ .grid{ grid-template-columns:repeat(4,1fr) } }
-      .card{ background:linear-gradient(180deg, rgba(16,21,16,.92), rgba(16,21,16,.65)); border:1px solid var(--border); border-radius:16px; overflow:hidden; display:grid; grid-template-rows: auto auto 1fr auto; gap:8px; box-shadow:0 0 24px rgba(0,255,156,.08), inset 0 0 24px rgba(167,128,255,.05) }
+      .card{ background:linear-gradient(180deg, rgba(16,21,16,.92), rgba(16,21,16,.65)); border:1px solid var(--border); border-radius:16px; overflow:hidden; display:grid; grid-template-rows:auto auto 1fr auto; gap:8px; box-shadow:0 0 24px rgba(0,255,156,.08), inset 0 0 24px rgba(167,128,255,.05) }
       .img-wrap{ aspect-ratio:1/1; width:100%; background:#0c130f; overflow:hidden } .img-wrap img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform 300ms ease } .card:hover .img-wrap img{ transform:scale(1.03) }
       .name{ font-weight:700; padding:0 12px } .price-row{ display:flex; align-items:baseline; justify-content:space-between; gap:8px; padding:0 12px; color:var(--muted); font-size:.95rem } .price{ font-weight:800; color:var(--text) }
       .cta-row{ padding:8px 12px 12px; display:grid; grid-template-columns:1fr; gap:8px }
@@ -40,20 +45,31 @@
       .raffle .img{ aspect-ratio:1/1; width:100%; overflow:hidden; border-radius:12px; border:1px solid rgba(167,128,255,.35) }
       .raffle .img img{ width:100%; height:100%; object-fit:cover; display:block }
       .raffle .title{ font-size:1.2rem; font-weight:800 } .raffle .meta{ color:var(--muted); font-size:.95rem }
-      .raffle .actions{ display:grid; grid-template-columns:1fr 1fr; gap:10px } .note{ color:var(--muted); font-size:.85rem }
+      .raffle .actions{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px } .note{ color:var(--muted); font-size:.85rem }
+      .bar{ background:rgba(0,255,156,.08); border-bottom:1px dashed var(--border); padding:8px 16px; text-align:center; position:relative }
+      .bar strong{ color:var(--purple) } .bar button{ margin-left:10px }
+      .install-tip{ text-align:center; color:var(--muted); font-size:.9rem; margin:8px 0 }
+      form .field{ display:grid; gap:6px } form input, form textarea{ padding:12px 14px; border-radius:12px; border:1px solid var(--border); background:rgba(16,24,18,.8); color:var(--text) }
+      form button{ margin-top:8px }
+      details summary{ cursor:pointer; color:var(--muted) }
     </style>
   </head>
   <body>
     <canvas id="matrix"></canvas>
     <div class="wrap">
+      <div id="bar" class="bar" hidden>
+        <span id="bar-text"></span>
+        <button id="bar-close" class="btn">Hide</button>
+      </div>
+
       <header>
         <div class="topbar">
           <div class="brand"><span>7TAROT</span></div>
           <nav>
             <a href="#shop">Shop</a>
             <a href="#raffle">Raffle</a>
-            <a href="#daily">Daily Draw</a>
             <a href="#meanings">Meanings</a>
+            <a href="#contact">Contact</a>
             <a href="https://wa.me/447527171238" target="_blank" rel="noopener">WhatsApp</a>
             <a href="https://m.me/sunhouse76" target="_blank" rel="noopener">Messenger</a>
           </nav>
@@ -65,6 +81,7 @@
             <a class="btn" href="#shop">Shop</a>
             <a class="btn" href="#raffle">Raffle</a>
           </div>
+          <div class="install-tip" id="install-tip">Tip: in Chrome, use “Install app” to add to your Home Screen.</div>
         </div>
       </header>
 
@@ -90,32 +107,43 @@
                 <div class="meta" id="raffle-ends">Ends soon</div>
                 <p class="note">Hosted on Raffall. Tickets sold externally; you’ll complete entry on Raffall.</p>
                 <div class="actions">
-                  <a id="raffle-enter" class="btn" href="#" target="_blank" rel="noopener">Enter Raffle</a>
+                  <a id="raffle-enter" class="btn" href="#" target="_blank" rel="noopener">Enter</a>
                   <a id="raffle-copy" class="btn" href="#">Copy Link</a>
+                  <a id="raffle-share" class="btn" href="#">Share</a>
                 </div>
               </div>
             </div>
           </article>
         </section>
 
-        <section id="daily" aria-labelledby="daily-title">
-          <h2 id="daily-title">Daily Card</h2>
-          <div class="row">
-            <a class="btn" href="#shop" onclick="alert('Daily Draw coming back later — shop is live now.');">Draw Today's Card</a>
-          </div>
+        <section id="meanings" aria-labelledby="meanings-title">
+          <h2 id="meanings-title">Majors — quick meanings</h2>
+          <details><summary>Open list</summary>
+            <div id="majors"></div>
+          </details>
         </section>
 
-        <section id="meanings" aria-labelledby="meanings-title">
-          <h2 id="meanings-title">Card Meanings</h2>
-          <div class="row" style="color:var(--muted)">
-            <div>Quick meanings are coming back soon. For personal guidance, message me any time.</div>
-          </div>
+        <section id="contact" aria-labelledby="contact-title">
+          <h2 id="contact-title">Contact</h2>
+          <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="field"><label>Your name<input name="name" required></label></p>
+            <p class="field"><label>Email<input type="email" name="email" required></label></p>
+            <p class="field"><label>Message<textarea name="message" rows="4" required></textarea></label></p>
+            <button class="btn" type="submit">Send</button>
+          </form>
+          <h3 style="margin-top:16px">Join the list</h3>
+          <form name="mailinglist" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="mailinglist">
+            <p class="field"><label>Email<input type="email" name="email" required></label></p>
+            <button class="btn" type="submit">Subscribe</button>
+          </form>
         </section>
       </main>
 
       <footer>© <span id="year"></span> 7TAROT — Powered by Big Cartel</footer>
     </div>
 
-    <script src="app.js?v=pwa-combined" defer></script>
+    <script src="app.js?v=enhanced1" defer></script>
   </body>
 </html>
