@@ -27,13 +27,15 @@
       .btn{ display:inline-block; padding:12px 14px; border-radius:12px; border:1px solid var(--border); background:rgba(0,255,156,.08); color:var(--text); font-weight:800; letter-spacing:.4px; text-align:center }
       .grid{ display:grid; grid-template-columns:1fr 1fr; gap:12px } @media(min-width:680px){ .grid{ grid-template-columns:repeat(3,1fr) } } @media(min-width:980px){ .grid{ grid-template-columns:repeat(4,1fr) } }
       .card{ background:linear-gradient(180deg, rgba(16,21,16,.92), rgba(16,21,16,.65)); border:1px solid var(--border); border-radius:16px; overflow:hidden; display:grid; grid-template-rows:auto auto 1fr auto; gap:8px; box-shadow:0 0 24px rgba(0,255,156,.08), inset 0 0 24px rgba(167,128,255,.05) }
-      .img-wrap{ aspect-ratio:1/1; width:100%; background:#0c130f; overflow:hidden } .img-wrap img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform 300ms ease } .card:hover .img-wrap img{ transform:scale(1.03) }
+      .img-wrap{ aspect-ratio:1/1; width:100%; background:#0c130f; overflow:hidden; position:relative } .img-wrap img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform 300ms ease } .card:hover .img-wrap img{ transform:scale(1.03) }
+      .bnpl{ position:absolute; bottom:8px; left:8px; font-size:.72rem; padding:4px 8px; border-radius:999px; background:rgba(0,255,156,.12); color:var(--text); border:1px solid rgba(0,255,156,.35); backdrop-filter: blur(4px); }
       .name{ font-weight:700; padding:0 12px } .price-row{ display:flex; align-items:baseline; justify-content:space-between; gap:8px; padding:0 12px; color:var(--muted); font-size:.95rem } .price{ font-weight:800; color:var(--text) }
       .cta-row{ padding:8px 12px 12px; display:grid; grid-template-columns:1fr; gap:8px }
       .row{ display:grid; grid-template-columns:1fr; gap:10px } .cta-inline{ display:flex; gap:10px; flex-wrap:wrap; justify-content:center }
       footer{ text-align:center; color:var(--muted); padding:20px; font-size:.85rem }
       .meta-tip{ display:none; position:sticky; top:0; z-index:5; background:#121812; border-bottom:1px dashed var(--border); color:var(--muted); padding:8px 12px; font-size:.95rem }
       .meta-tip b{ color:var(--purple) }
+      .notice{ margin:8px auto 0; max-width:1100px; border:1px dashed var(--border); border-radius:12px; padding:10px 12px; color:var(--muted); background:linear-gradient(180deg, rgba(16,21,16,.92), rgba(16,21,16,.65)) }
     </style>
   </head>
   <body>
@@ -53,6 +55,7 @@
             <a href="#tip">Tip Jar</a>
             <a href="#shop">Shop</a>
             <a href="#raffle">Raffle</a>
+            <a href="#payments">Payment options</a>
             <a href="#contact">Contact</a>
           </nav>
         </div>
@@ -68,6 +71,10 @@
       </header>
 
       <main>
+        <div class="notice" id="installments-notice" aria-live="polite">
+          <strong>Finance available:</strong> installment options may appear at checkout on eligible purchases (e.g., <em>PayPal Pay Later</em> or <em>Clearpay/Afterpay</em> via Stripe), depending on your location and the item.
+        </div>
+
         <section id="tip" aria-labelledby="tip-title">
           <h2 id="tip-title">Tip Jar</h2>
           <div class="cta-inline">
@@ -101,6 +108,14 @@
           </article>
         </section>
 
+        <section id="payments" aria-labelledby="payments-title">
+          <h2 id="payments-title">Payment options</h2>
+          <p style="color:var(--muted)">
+            We accept card and wallet payments. <br>
+            <strong>Installments</strong> may be available at checkout on eligible purchases via providers such as <em>PayPal Pay Later</em> or <em>Clearpay/Afterpay</em> (via Stripe), depending on your location and the item.
+          </p>
+        </section>
+
         <section id="contact" aria-labelledby="contact-title">
           <h2 id="contact-title">Contact</h2>
           <p><a class="btn" href="https://wa.me/447527171238" target="_blank" rel="noopener">WhatsApp</a></p>
@@ -111,6 +126,6 @@
       <footer>© <span id="year"></span> 7TAROT — Powered by Big Cartel</footer>
     </div>
 
-    <script src="app.js?v=restore_rain_tipjar_iab" defer></script>
+    <script src="app.js?v=finance_notice_restore" defer></script>
   </body>
 </html>

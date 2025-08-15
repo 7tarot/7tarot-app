@@ -1,15 +1,16 @@
-7TAROT — Restore Tip Jar + Matrix Rain + In‑App Browser Tip (drag & drop)
+7TAROT — Finance/Installments Notice (drag & drop)
 
 What this adds
-- Tip Jar section (PayPal button wired to your donation link)
-- Matrix rain background
-- Top tip bar inside Facebook/Instagram in‑app with an **Open in Browser** button and **Copy Link** fallback
-- URL cleaner that removes fbclid/utm_*
+- Notice under the header: “Finance available — installment options may appear at checkout (PayPal Pay Later or Clearpay/Afterpay via Stripe)…”
+- “Payment options” section with a plain-English explanation.
+- A small “Finance available*” badge on each product image.
+- Keeps: Tip Jar (PayPal), Matrix rain, “Open in Browser” tip, and everything else you already have.
 
 How to use
 1) Unzip.
-2) GitHub → your repo → Add file → Upload files → drag **index.html** and **app.js** to the repo root (overwrite).
+2) GitHub → your repo → Add file → Upload files → drag **index.html** and **app.js** into the repo root (overwrite).
 3) Commit → Netlify redeploys.
-4) Refresh on your phone.
 
-Note: iOS in‑app browsers can’t auto‑open Safari directly; the button tries native Share first, then opens a new tab and shows instructions. The Copy button is a guaranteed fallback.
+Customisation
+- Want the badge only on certain items? Tell me the product names and I’ll tailor it.
+- Want the notice text tweaked (“Pay in 3/4” etc.)? Say the word.
