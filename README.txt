@@ -1,15 +1,15 @@
-7TAROT — Installments Pack (drag & drop)
+7TAROT — Restore Tip Jar + Matrix Rain + In‑App Browser Tip (drag & drop)
 
 What this adds
-- A small notice bar under the header: “Installment options available at checkout…”
-- A “Payment options” section explaining that PayPal Pay Later and Clearpay/Afterpay (via Stripe) may be available, depending on location + eligibility.
-- A subtle “Installments available*” pill badge over product images.
+- Tip Jar section (PayPal button wired to your donation link)
+- Matrix rain background
+- Top tip bar inside Facebook/Instagram in‑app with an **Open in Browser** button and **Copy Link** fallback
+- URL cleaner that removes fbclid/utm_*
 
 How to use
 1) Unzip.
-2) GitHub → your repo → Add file → Upload files → drag **index.html** and **app.js** into the repo root (overwrite).
+2) GitHub → your repo → Add file → Upload files → drag **index.html** and **app.js** to the repo root (overwrite).
 3) Commit → Netlify redeploys.
-4) (Optional) If you don’t want the badge on every item, tell me which items to show it on and I’ll tailor it.
+4) Refresh on your phone.
 
-Note
-This is informational messaging only. Actual installment options depend on your connected payment providers and plan, and may vary by customer location/eligibility.
+Note: iOS in‑app browsers can’t auto‑open Safari directly; the button tries native Share first, then opens a new tab and shows instructions. The Copy button is a guaranteed fallback.
