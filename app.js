@@ -1,17 +1,11 @@
-// --- Clean tracking params from URL (fbclid, gclid, utm_*) ---
-(() => {
-  try {
-    const u = new URL(location.href);
-    const p = u.searchParams;
-    const keys = ['fbclid','gclid','utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
-    let changed = false;
-    keys.forEach(k => { if (p.has(k)) { p.delete(k); changed = true; }});
-    if (changed) {
-      const newUrl = u.origin + u.pathname + (p.toString() ? '?' + p : '') + location.hash;
-      history.replaceState(null, '', newUrl);
-    }
-  } catch {}
-})();
-// --------------------------------------------------------------
-
-// (No other app code needed for the share fix; keep your existing app.js if you like)
+// Clean URL params (fbclid/gclid/utm_*)
+(()=>{try{const u=new URL(location.href),p=u.searchParams;['fbclid','gclid','utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(k=>p.delete(k));history.replaceState(null,'',u.origin+u.pathname+(p.toString()?'?'+p:'')+location.hash);}catch{}})();
+// Raffle + Store
+const SUB='7tarot', API=`https://api.bigcartel.com/${SUB}`;
+const RAFFLE={ url:'https://raffall.com/393853/enter-raffle-to-win-my-own-personal-tarot-deck-hosted-by-steven-billy-abbott', title:'Win my personal tarot deck', endsAt:'' };
+const $=(s)=>document.querySelector(s);
+function money(n){try{return new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP'}).format(n);}catch{return '£'+Number(n).toFixed(2);}}
+async function products(){const r=await fetch(`${API}/products.json`,{cache:'no-store',mode:'cors'});if(!r.ok)throw 0;return r.json();}
+function render(list){const g=$('#grid'),e=$('#empty');g.innerHTML='';if(!list.length){e.style.display='block';return;}e.style.display='none';list.forEach(p=>{const img=(p.images&&p.images[0]&&(p.images[0].secure_url||p.images[0].url))||'';const price=p.on_sale&&p.options?.[0]?.price!==undefined?p.options[0].price:(p.price??p.default_price??0);const url=`https://${SUB}.bigcartel.com${p.url}?utm_source=7tarot-app&utm_medium=buy_button`;const soldOut=(p.options||[]).every(o=>o.sold_out);const el=document.createElement('article');el.innerHTML=`<a href="${url}" target="_blank" rel="noopener"><img alt="${p.name}" src="${img}" style="width:100%;border:1px solid rgba(0,255,156,.25);border-radius:10px" onerror="this.src='https://dummyimage.com/600x600/0c130f/e7ffee&text=No+Image'"></a><div><strong>${p.name}</strong></div><div>${money(price)}</div><div>${soldOut?'Sold Out':'Available'}</div>`;g.appendChild(el);});}
+function setupRaffle(){const t=$('#rtitle'),m=$('#rmeta'),enter=$('#rent'),copy=$('#rcopy'),share=$('#rshare');if(t)t.textContent=RAFFLE.title;if(enter)enter.href=RAFFLE.url;copy&&copy.addEventListener('click',e=>{e.preventDefault();navigator.clipboard.writeText(RAFFLE.url).then(()=>{copy.textContent='Copied!';setTimeout(()=>copy.textContent='Copy Link',1200);});});share&&share.addEventListener('click',async e=>{e.preventDefault();const d={title:'7TAROT Raffle',text:RAFFLE.title,url:RAFFLE.url};if(navigator.share){try{await navigator.share(d);}catch{}}else{navigator.clipboard.writeText(RAFFLE.url);share.textContent='Copied!';setTimeout(()=>share.textContent='Share',1200);}});const end=RAFFLE.endsAt?new Date(RAFFLE.endsAt):null;if(end&&!isNaN(end.valueOf())&&m){const tick=()=>{const now=new Date(),diff=end-now;if(diff<=0){m.textContent='Raffle closed';return;}const d=Math.floor(diff/864e5),h=Math.floor(diff/36e5)%24,mi=Math.floor(diff/6e4)%60,s=Math.floor(diff/1e3)%60;m.textContent=`Ends in: ${d}d ${String(h).padStart(2,'0')}:${String(mi).padStart(2,'0')}:${String(s).padStart(2,'0')}`;requestAnimationFrame(tick);};tick();}}
+(async()=>{setupRaffle();try{render(await products());}catch(e){document.querySelector('#grid').innerHTML='<div style="padding:8px;color:#ffb3b3">Could not load products right now.</div>';}})();

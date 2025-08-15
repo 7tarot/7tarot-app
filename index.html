@@ -3,32 +3,47 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>7TAROT — Readings, Courses & Decks</title>
+    <title>7TAROT — Shop, Raffle, Readings</title>
+    <meta name="description" content="7TAROT — Readings, courses, handmade tarot decks, and raffles by Steve." />
     <link rel="canonical" href="https://super-semifreddo-edae3b.netlify.app/">
-    <meta name="description" content="7TAROT — Shop readings, courses, and decks by Steve. Raffles live now." />
-    <!-- Open Graph -->
+    <!-- Open Graph / Twitter (for Messenger/X cards) -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="7TAROT">
     <meta property="og:title" content="7TAROT — Shop, Raffle, Readings">
     <meta property="og:description" content="Matrix‑mystical storefront for readings, courses, decks, and raffles by Steve.">
     <meta property="og:url" content="https://super-semifreddo-edae3b.netlify.app/">
     <meta property="og:image" content="https://super-semifreddo-edae3b.netlify.app/assets/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="7TAROT — Readings • Courses • Decks">
-    <!-- Twitter -->
+    <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="7TAROT — Shop, Raffle, Readings">
     <meta name="twitter:description" content="Readings • Courses • Decks • Raffle">
     <meta name="twitter:image" content="https://super-semifreddo-edae3b.netlify.app/assets/og-image.png">
-    <style>body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#0a0f0a;color:#e7ffee} .wrap{min-height:100svh;padding:20px} a{color:#e7ffee}</style>
+    <style>
+      :root { --bg:#0a0f0a; --panel:#0d130f; --glow:#00ff9c; --purple:#a780ff; --text:#e7ffee; --muted:#9db8a8; --border:rgba(0,255,156,0.25) }
+      html,body { margin:0; padding:0; background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif }
+      a { color:var(--text); text-decoration:none }
+      .wrap { padding:16px; max-width:1000px; margin:0 auto }
+      .btn { display:inline-block; padding:10px 12px; border:1px solid var(--border); border-radius:10px; background:rgba(0,255,156,.08) }
+      .grid { display:grid; grid-template-columns:1fr 1fr; gap:12px }
+    </style>
   </head>
   <body>
     <div class="wrap">
-      <h1>7TAROT — Share Preview Ready</h1>
-      <p>This index.html includes full Open Graph and Twitter tags. Messenger/FB/X will now display a proper preview.</p>
-      <p>Keep the <code>&lt;meta&gt;</code> tags in your final page. You can paste them into your full layout later.</p>
-      <p><a href="https://7tarot.bigcartel.com" target="_blank" rel="noopener">Open Full Store</a></p>
+      <h1>7TAROT</h1>
+      <section id="raffle"><h2>Raffle</h2>
+        <p><img alt="Raffle deck image" src="assets/raffle-placeholder.png" style="width:200px;border:1px solid var(--border);border-radius:10px"></p>
+        <p><strong id="rtitle">Win my personal tarot deck</strong></p>
+        <p id="rmeta">Ends soon</p>
+        <p>
+          <a id="rent" class="btn" href="#" target="_blank" rel="noopener">Enter</a>
+          <a id="rcopy" class="btn" href="#">Copy Link</a>
+          <a id="rshare" class="btn" href="#">Share</a>
+        </p>
+      </section>
+      <section id="shop"><h2>Shop</h2>
+        <div id="grid" class="grid" aria-live="polite"></div>
+        <div id="empty" style="display:none; color:#9db8a8; padding:8px;">No products found.</div>
+      </section>
     </div>
     <script src="app.js" defer></script>
   </body>
