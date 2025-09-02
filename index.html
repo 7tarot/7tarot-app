@@ -1,64 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>7TAROT — Shop, Raffle, Readings</title>
+    <meta name="description" content="7TAROT — Readings, courses, decks, and raffles by Steve." />
+    <link rel="canonical" href="https://super-semifreddo-edae3b.netlify.app/">
+    <style>
+      :root { --bg:#0a0f0a; --panel:#0d130f; --glow:#00ff9c; --purple:#a780ff; --text:#e7ffee; --muted:#9db8a8; --border:rgba(0,255,156,0.25); }
+      *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent }
+      html{ -webkit-text-size-adjust:100%; text-size-adjust:100%; font-size:16px }
+      html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif }
+      a{ color:var(--text); text-decoration:none }
+      canvas#matrix{ position:fixed; inset:0; width:100%; height:100%; z-index:0; pointer-events:none; opacity:.25 }
+      .wrap{ min-height:100svh; display:flex; flex-direction:column; gap:16px; position:relative; z-index:1 }
+      header{ position:relative; z-index:2; padding:12px 16px; border-bottom:1px dashed var(--border) }
+      .topbar{ display:grid; grid-template-columns:1fr auto; gap:12px; align-items:center }
+      .brand{ font-weight:900; letter-spacing:1px; font-size:1.4rem; text-transform:uppercase }
+      .brand span{ color:var(--purple); text-shadow:0 0 12px var(--glow) }
+      nav{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:flex-end }
+      nav a{ font-size:.95rem; opacity:.9 } nav a:hover{ opacity:1; text-shadow:0 0 6px var(--glow) }
+      .hero{ text-align:center; padding:8px 16px 0 } .hero h1{ margin:8px 0 2px; font-size:1.9rem; letter-spacing:1px } .hero .tag{ color:var(--muted); font-size:.95rem }
+      main{ position:relative; z-index:1; padding:6px 16px 24px } section{ margin:20px auto; max-width:1100px } h2{ margin:12px 0; font-size:1.4rem }
+      .btn{ display:inline-block; padding:12px 14px; border-radius:12px; border:1px solid var(--border); background:rgba(0,255,156,.08); color:var(--text); font-weight:800; letter-spacing:.4px; text-align:center }
+      .grid{ display:grid; grid-template-columns:1fr 1fr; gap:12px } @media(min-width:680px){ .grid{ grid-template-columns:repeat(3,1fr) } } @media(min-width:980px){ .grid{ grid-template-columns:repeat(4,1fr) } }
+      .card{ background:linear-gradient(180deg, rgba(16,21,16,.92), rgba(16,21,16,.65)); border:1px solid var(--border); border-radius:16px; overflow:hidden; display:grid; grid-template-rows:auto auto 1fr auto; gap:8px; box-shadow:0 0 24px rgba(0,255,156,.08), inset 0 0 24px rgba(167,128,255,.05) }
+      .img-wrap{ aspect-ratio:1/1; width:100%; background:#0c130f; overflow:hidden; position:relative } .img-wrap img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform 300ms ease } .card:hover .img-wrap img{ transform:scale(1.03) }
+      .bnpl{ position:absolute; bottom:8px; left:8px; font-size:.72rem; padding:4px 8px; border-radius:999px; background:rgba(0,255,156,.12); color:var(--text); border:1px solid rgba(0,255,156,.35); backdrop-filter: blur(4px); }
+      .name{ font-weight:700; padding:0 12px } .price-row{ display:flex; align-items:baseline; justify-content:space-between; gap:8px; padding:0 12px; color:var(--muted); font-size:.95rem } .price{ font-weight:800; color:var(--text) }
+      .cta-row{ padding:8px 12px 12px; display:grid; grid-template-columns:1fr; gap:8px }
+      .row{ display:grid; grid-template-columns:1fr; gap:10px } .cta-inline{ display:flex; gap:10px; flex-wrap:wrap; justify-content:center }
+      footer{ text-align:center; color:var(--muted); padding:20px; font-size:.85rem }
+      .meta-tip{ display:none; position:sticky; top:0; z-index:5; background:#121812; border-bottom:1px dashed var(--border); color:var(--muted); padding:8px 12px; font-size:.95rem }
+      .meta-tip b{ color:var(--purple) }
+      .notice{ margin:8px auto 0; max-width:1100px; border:1px dashed var(--border); border-radius:12px; padding:10px 12px; color:var(--muted); background:linear-gradient(180deg, rgba(16,21,16,.92), rgba(16,21,16,.65)) }
+    </style>
+  </head>
+  <body>
+    <canvas id="matrix"></canvas>
+    <div id="iab-tip" class="meta-tip">
+      Viewing inside Facebook/Instagram. For best results, <b>open in your browser</b>.
+      <div class="cta-inline" style="margin-top:6px">
+        <button class="btn" id="open-browser" type="button">Open in Browser</button>
+        <button class="btn" id="copy-link" type="button" style="background:transparent">Copy Link</button>
+      </div>
+    </div>
+    <div class="wrap">
+      <header>
+        <div class="topbar">
+          <div class="brand"><span>7TAROT</span></div>
+          <nav>
+            <a href="#tip">Tip Jar</a>
+            <a href="#shop">Shop</a>
+            <a href="#raffle">Raffle</a>
+            <a href="#payments">Payment options</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+        <div class="hero">
+          <h1>7TAROT</h1>
+          <div class="tag">Readings • Courses • Decks</div>
+          <div class="cta-inline" style="margin-top:8px;">
+            <a class="btn" href="#tip">Tip Jar</a>
+            <a class="btn" href="#shop">Shop</a>
+            <a class="btn" href="#raffle">Raffle</a>
+          </div>
+        </div>
+      </header>
 
-<!-- START OF ADDITIONAL SECTION -->
-<section id="community-links" style="padding: 2rem; background-color: #121212; color: #ffffff;">
-  <h2 style="text-align: center; color: #cfaaff; font-size: 2rem;">✨ Explore More from 7 Tarot ✨</h2>
+      <main>
+        <div class="notice" id="installments-notice" aria-live="polite">
+          <strong>Finance available:</strong> installment options may appear at checkout on eligible purchases (e.g., <em>PayPal Pay Later</em> or <em>Clearpay/Afterpay</em> via Stripe), depending on your location and the item.
+        </div>
 
-  <div style="margin-top: 2rem;">
-    <h3 style="color: #ffffff;">🎉 Flexible Payment Now Available</h3>
-    <p>You can now pay in 1–4 instalments at checkout with no extra stress!</p>
-    <a href="https://7tarot.bigcartel.com" target="_blank" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #9f7aea; color: #fff; border-radius: 8px; text-decoration: none;">🛒 Visit the Shop</a>
-  </div>
+        <section id="tip" aria-labelledby="tip-title">
+          <h2 id="tip-title">Tip Jar</h2>
+          <div class="cta-inline">
+            <a id="tip-paypal" class="btn" href="#" target="_blank" rel="noopener" style="display:none">PayPal</a>
+            <a id="tip-kofi" class="btn" href="#" target="_blank" rel="noopener" style="display:none">Ko‑fi</a>
+            <a id="tip-bmac" class="btn" href="#" target="_blank" rel="noopener" style="display:none">BuyMeACoffee</a>
+          </div>
+        </section>
 
-  <div style="margin-top: 2rem;">
-    <h3 style="color: #ffffff;">🎟️ Live Raffles – Win Tarot Decks</h3>
-    <a href="https://raffall.com/393853/enter-raffle-to-win-my-own-personal-tarot-deck-hosted-by-steven-billy-abbott" target="_blank" style="text-decoration: underline; color: #cfaaff;">👉 Enter the Raffle</a>
-  </div>
+        <section id="shop" aria-labelledby="shop-title">
+          <h2 id="shop-title">Shop</h2>
+          <div id="grid" class="grid" aria-live="polite"></div>
+          <div id="empty" style="display:none; text-align:center; color:#9db8a8; padding:24px;">No products found.</div>
+        </section>
 
-  <div style="margin-top: 2rem;">
-    <h3 style="color: #ffffff;">👁️‍🗨️ Join My YouTube Community</h3>
-    <p>Access exclusive member-only content and bonus readings.</p>
-    <a href="https://www.youtube.com/channel/UCPDUeRp6OU6xVAYSOOvEXTw/join" target="_blank" style="text-decoration: underline; color: #cfaaff;">👉 Click to Join</a>
-  </div>
+        <section id="raffle" aria-labelledby="raffle-title">
+          <h2 id="raffle-title">Raffle</h2>
+          <article class="raffle" style="background:linear-gradient(180deg, rgba(16,21,16,.92), rgba(16,21,16,.65)); border:1px solid var(--border); border-radius:16px; padding:12px;">
+            <div class="top" style="display:grid; gap:10px">
+              <div class="img" style="aspect-ratio:1/1; width:100%; overflow:hidden; border-radius:12px; border:1px solid rgba(167,128,255,.35)"><img id="raffle-img" alt="Raffle deck image" src="assets/raffle-placeholder.png" style="width:100%;height:100%;object-fit:cover"></div>
+              <div>
+                <div class="title" id="raffle-title-text" style="font-size:1.2rem; font-weight:800">Win my personal tarot deck</div>
+                <div class="meta" id="raffle-ends" style="color:var(--muted); font-size:.95rem">Ends soon</div>
+                <div class="cta-inline" style="margin-top:6px">
+                  <a id="raffle-enter" class="btn" href="#" target="_blank" rel="noopener">Enter</a>
+                  <a id="raffle-copy" class="btn" href="#">Copy Link</a>
+                  <a id="raffle-share" class="btn" href="#">Share</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
 
-  <div style="margin-top: 2rem;">
-    <h3 style="color: #ffffff;">📘 Connect with Me on Facebook</h3>
-    <ul>
-      <li><a href="https://www.facebook.com/groups/7tarot" target="_blank" style="color: #cfaaff;">7 Tarot Raffle & Readings Group</a></li>
-      <li><a href="https://www.facebook.com/profile.php?id=61576679642526" target="_blank" style="color: #cfaaff;">7 Tarot Business Page</a></li>
-      <li><a href="https://www.facebook.com/sunhouse76/" target="_blank" style="color: #cfaaff;">Steven’s Personal Profile</a></li>
-    </ul>
-  </div>
+        <section id="payments" aria-labelledby="payments-title">
+          <h2 id="payments-title">Payment options</h2>
+          <p style="color:var(--muted)">
+            We accept card and wallet payments. <br>
+            <strong>Installments</strong> may be available at checkout on eligible purchases via providers such as <em>PayPal Pay Later</em> or <em>Clearpay/Afterpay</em> (via Stripe), depending on your location and the item.
+          </p>
+        </section>
 
-  <div style="margin-top: 2rem;">
-    <h3 style="color: #ffffff;">💬 Join the Community Chat</h3>
-    <a href="https://discord.gg/sj8h6kDmeV" target="_blank" style="text-decoration: underline; color: #cfaaff;">👉 Join Discord</a>
-  </div>
+        <section id="contact" aria-labelledby="contact-title">
+          <h2 id="contact-title">Contact</h2>
+          <p><a class="btn" href="https://wa.me/447527171238" target="_blank" rel="noopener">WhatsApp</a></p>
+          <p><a class="btn" href="https://m.me/sunhouse76" target="_blank" rel="noopener">Messenger</a></p>
+        </section>
+      
+<section id="community-links" aria-labelledby="community-title">
+  <h2 id="community-title">✨ Explore More from 7 Tarot ✨</h2>
 
-  <div style="margin-top: 2rem;">
-    <h3 style="color: #ffffff;">📸 Instagram</h3>
-    <a href="https://www.instagram.com/stevenabbott1976googlemailcom/" target="_blank" style="text-decoration: underline; color: #cfaaff;">👉 Follow Me</a>
-  </div>
+  <div class="row">
+    <div>
+      <h3>🎉 Flexible Payment Now Available</h3>
+      <p>You can now pay in 1–4 instalments at checkout with no extra stress!</p>
+      <p><a class="btn" href="https://7tarot.bigcartel.com" target="_blank">🛒 Visit the Shop</a></p>
+    </div>
 
-  <div style="margin-top: 2rem;">
-    <h3 style="color: #ffffff;">🎥 More from Me on YouTube</h3>
-    <ul>
-      <li><a href="https://www.youtube.com/channel/UCAyMKJHdRN1QYDASviFdugw" target="_blank" style="color: #cfaaff;">Behind-the-Scenes Tarot Vlogs</a></li>
-      <li><a href="https://www.youtube.com/channel/UCkkhwo-3smY9WLKGy8AOPAA" target="_blank" style="color: #cfaaff;">Angel Radio – Spiritual Frequencies</a></li>
-    </ul>
-  </div>
+    <div>
+      <h3>🎟️ Live Raffles – Win Tarot Decks</h3>
+      <p><a href="https://raffall.com/393853/enter-raffle-to-win-my-own-personal-tarot-deck-hosted-by-steven-billy-abbott" class="btn" target="_blank">👉 Enter the Raffle</a></p>
+    </div>
 
-  <div style="margin-top: 2rem;">
-    <h3 style="color: #ffffff;">🎁 Wishlist & Donations</h3>
-    <ul>
-      <li><a href="https://www.amazon.co.uk/hz/wishlist/ls/35ED1Z797UEPF?ref_=wl_share" target="_blank" style="color: #cfaaff;">Amazon Wish List</a></li>
-      <li><a href="https://www.paypal.com/donate?hosted_button_id=PQYG35KEQ8DT2&source=url" target="_blank" style="color: #cfaaff;">Donate via PayPal</a></li>
-    </ul>
-  </div>
+    <div>
+      <h3>👁️‍🗨️ Join My YouTube Community</h3>
+      <p>Access exclusive member-only content and bonus readings.</p>
+      <p><a href="https://www.youtube.com/channel/UCPDUeRp6OU6xVAYSOOvEXTw/join" class="btn" target="_blank">👉 Click to Join</a></p>
+    </div>
 
-  <div style="margin-top: 2rem;">
-    <h3 style="color: #ffffff;">📧 Stay Connected</h3>
-    <p>Email: <a href="mailto:stevenabbott1976@googlemail.com" style="color: #cfaaff;">stevenabbott1976@googlemail.com</a></p>
-    <p>💌 Join my mailing list for discounts and updates!</p>
+    <div>
+      <h3>📘 Connect on Facebook</h3>
+      <ul>
+        <li><a href="https://www.facebook.com/groups/7tarot" target="_blank">Group: 7 Tarot Raffle & Readings</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61576679642526" target="_blank">7 Tarot Business Page</a></li>
+        <li><a href="https://www.facebook.com/sunhouse76/" target="_blank">Steven’s Personal Profile</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>💬 Discord Community</h3>
+      <p><a href="https://discord.gg/sj8h6kDmeV" class="btn" target="_blank">👉 Join the Chat</a></p>
+    </div>
+
+    <div>
+      <h3>📸 Instagram</h3>
+      <p><a href="https://www.instagram.com/stevenabbott1976googlemailcom/" class="btn" target="_blank">👉 Follow Me</a></p>
+    </div>
+
+    <div>
+      <h3>🎥 More from Me on YouTube</h3>
+      <ul>
+        <li><a href="https://www.youtube.com/channel/UCAyMKJHdRN1QYDASviFdugw" target="_blank">Behind-the-Scenes Tarot Vlogs</a></li>
+        <li><a href="https://www.youtube.com/channel/UCkkhwo-3smY9WLKGy8AOPAA" target="_blank">Angel Radio – Spiritual Frequencies</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>🎁 Wishlist & Donations</h3>
+      <ul>
+        <li><a href="https://www.amazon.co.uk/hz/wishlist/ls/35ED1Z797UEPF?ref_=wl_share" target="_blank">Amazon Wish List</a></li>
+        <li><a href="https://www.paypal.com/donate?hosted_button_id=PQYG35KEQ8DT2&source=url" target="_blank">Donate via PayPal</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>📧 Stay Connected</h3>
+      <p>Email: <a href="mailto:stevenabbott1976@googlemail.com">stevenabbott1976@googlemail.com</a></p>
+      <p>💌 Join my mailing list for discounts and updates!</p>
+    </div>
   </div>
 </section>
-<!-- END OF ADDITIONAL SECTION -->
+
+</main>
+
+      <footer>© <span id="year"></span> 7TAROT — Powered by Big Cartel</footer>
+    </div>
+
+    <script src="app.js?v=finance_notice_restore" defer></script>
+  </body>
+</html>
